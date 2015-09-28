@@ -10,7 +10,7 @@
     <h1>Log in</h1>
     <br>
     <form action="Functions/LoginFunction.php" method="post">
-        <input type="text" name="user" placeholder="Username">
+        <input type="text" name="mail" placeholder="Username">
         <input type="password" name="pass" placeholder="Password">
         <input type="submit" name="login" class="login login-submit" value="Log in">
     </form>

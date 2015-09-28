@@ -14,9 +14,11 @@
         <input type="password" name="pass" placeholder="Password">
         <input type="submit" name="login" class="login login-submit" value="Log in">
     </form>
+    <!--
     <form action="registerpage.php">
         <input type="submit" class="login login-submit" value="Register">
     </form>
+    -->
     <div class="login-help">
         <?php if(isset($_COOKIE["user"]))
         {

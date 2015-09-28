@@ -6,7 +6,7 @@
  * 
  * user.php
  * USER CLASS
- * 
+ *
  * This class allow to create user object in order to represent every single user and login function
  */
 

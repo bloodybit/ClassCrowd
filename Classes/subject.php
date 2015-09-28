@@ -10,7 +10,6 @@
  * SUBJECT CLASS
  *
  * Class which collect all the information about every subject listed in db
- * git doesn't work
  */
 class Subject
 {

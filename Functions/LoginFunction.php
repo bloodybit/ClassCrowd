@@ -6,6 +6,8 @@
  * Time: 23:44
  */
 
-if($_POST['user']!=null && $_POST['pass']!=null){
+include_once('DbFunction.php');
 
+if($_POST['user']!=null && $_POST['pass']!=null){
+    $db =
 }

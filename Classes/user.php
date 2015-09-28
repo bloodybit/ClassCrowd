@@ -10,7 +10,7 @@
  * This class allow to create user object in order to represent every single user and login function
  */
 
-Class User{
+class User{
 	
 	public $id;
 	public $name;
@@ -19,8 +19,18 @@ Class User{
 	public $password;
 	public $class;
 	public $deleted;
-	
-	function __construct($name, $surname, $mail, $password, $class){
+
+	function __construct($input = false){
+		if (is_array($input)) {
+			foreach ($input as $key => $val) {
+				// Note the $key instead of key.
+				// This will give the value in $key instead of 'key' itself
+				$this->$key = $val;
+			}
+		}
+	}
+
+	function fullConstruct($name, $surname, $mail, $password, $class){
 		$this->name = $name;
 		$this->surname = $surname;
 		$this->mail = $mail;
@@ -30,7 +40,7 @@ Class User{
 	}
 
 	function withIdAndDeleted($id, $name, $surname, $mail, $password, $class, $deleted){
-		$this->__construct($name, $surname, $mail, $password, $class);
+		$this->fullConstruct($name, $surname, $mail, $password, $class);
 		$this->id = $id;
 		$this->deleted = $deleted;
 	}

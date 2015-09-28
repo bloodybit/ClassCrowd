@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Log In</title>
-    <link rel="stylesheet" href="css/indexstyle.css">
+    <title>ClassCrowd</title>
+    <link rel="stylesheet" type="text/css" href="css/960_12_col.css" />
+    <link type="text/css" href="css/indexstyle.css" />
 </head>
 <body>
 <div class="login-card">

@@ -1,0 +1,49 @@
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: white;
+}
+.wrapper {
+	position: absolute;
+    width: 1040px;
+    top: 0px;
+    left: 240px;
+    background-color: white;
+}
+aside {
+	position: fixed;
+    width: 240px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+	background-color: #34495E;
+	color: white;
+}
+#avatar {
+	margin-top: 12px;
+	margin-left: 12px;
+}
+#avatar-pic {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+#avatar-txt {
+	display: block;
+	position: absolute;
+	font-size: 10pt;
+	line-height: 10px;
+	left: 84px;
+	width: 144px;
+}
+
+.cut-text {
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+

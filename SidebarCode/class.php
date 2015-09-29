@@ -1,15 +1,9 @@
 <h2>Classes</h2>
 
 <?php
-    session_start();
-//  –––  require_once '../Class2/classs.php';
+    $classes = Classe::getClasses(10);
 
-//echo"ee";
-//    $classes = Classs::getClasses(10);
-//
-//    //print_r($classes);
-//    echo "ciao";
-
+    foreach($classes as $class){
+        echo ('<br> <a href="main.php?sidebar=subject&class_id='.$class->getId() . '">' . $class->getClass() .'</a>');
+    }
 ?>
-
-<a href="main.php?sidebar=subject">Subject</a>

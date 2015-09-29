@@ -7,7 +7,7 @@
  */
 
 include_once('DbFunction.php');
-include_once('../Class2/user.php');
+include_once('../Classe/user.php');
 
 session_start();
 

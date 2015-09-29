@@ -11,9 +11,15 @@ function formValidation() {
 
     if (fname_validation(fname)) {
         if (lname_validation(lname)) {
+            if (email_validation(email)) {
+                if (pass_validation(pass, repass)) {
 
+                }
+            }
         }
     }
+
+    return false;
 
 }
 
@@ -36,4 +42,36 @@ function lname_validation(lname) {
     }
     return true;
 }
+
+function email_validation(email) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.value.match(mailformat)) {
+        return true;
+    } else {
+        alert("You have entered an invalid email address");
+        email.focus();
+        return false;
+    }
+}
+
+function pass_validation(pass, repass) {
+    var pass_len = pass.value.length;
+    var repass_len = repass.value.length;
+    if (pass_len == 0 || repass_len == 0) {
+        alert("Password should not be empty");
+        pass.focus();
+        repass.focus();
+        return false;
+    } else if (pass != repass) {
+        alert("Passwords should be the same");
+        pass.focus();
+        repass.focus();
+        return false;
+    }
+    return true;
+}
+
+
+
+
 

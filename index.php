@@ -50,9 +50,9 @@
         </form>
 	</section>
 	
-	<section class="register">
+	<section class="registration">
 		<h2>Register</h2>
-        <form name="registration" onSubmit="return formValidation();">
+        <form class="registration-card" onSubmit="return formValidation();">
             <ul>
                 <li><label for="firstname">First name:</label></li>
                 <li><input type="text" name="firstname" size="12" /></li>
@@ -74,6 +74,8 @@
                 <option selected="" value="Default">Please select your class:</option>
                 <option value="WebDev1st">Web Development, 1st sem.</option>
                 </select></li>
+                </br>
+                <li><input type="submit" name="registration" value="Register!"></li>
             </ul>
 
         </form>

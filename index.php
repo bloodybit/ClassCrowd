@@ -1,58 +1,87 @@
 <?php
-    session_start();
+    /*session_start();
     if($_COOKIE['id']==$_SESSION['id']){
         header("Location:main.php");
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>ClassCrowd</title>
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="wrapper">
-    <header>
-        <h1>ClassCrowd</h1>
-        <nav>
-            <ul>
-                <li><a href="" class="current">home</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">contact</a></li>
-            </ul>
-        </nav>
-        <form class="login-card" action="Functions/LoginFunction.php" method="post">
-            <input type="text" name="mail" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
-            <input type="submit" name="login" class="login login-submit" value="Log in">
-        </form>
+
+<aside>
+	<!--
+	<div id="avatar">
+		<img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
+		<div id="avatar-txt">
+			<p class="cut-text"><b>asdf</b></p>
+			<p class="cut-text">5915web1ei</p>
+		</div>
+	</div>
+	-->
+
+	<section class="login">	
+        <h2>Login</h2>
         <div id="message">
             <?php
-            session_start();
+                session_start();
 
-            if(isset($_SESSION['message'])){
-                echo("<h4>".$_SESSION['message']."</h4>");
-                unset($_SESSION['message']);
-            }
-            ?>
+                if(isset($_SESSION['message'])){
+                    echo("<p>".$_SESSION['message']."</p>");
+                    unset($_SESSION['message']);
+                }
+                ?>
         </div>
-    </header>
-    <section class="welcome">
-        <article></article>
-    </section>
-    <aside>
-        <section class="register">
-            <!--
-            <form class="register-card" action="" method="post">
-                <input type="text" name="mail" placeholder="Username">
-                <input type="password" name="pass" placeholder="Password">
-                <input type="submit" name="login" class="login login-submit" value="Log in">
-            </form>
-            -->
-        </section>
-    </aside>
-</div>
+        <form class="login-card" action="Functions/LoginFunction.php" method="post">
+            <ul>
+                <li><label for="mail">e-mail address:</label></li>
+                <li><input type="text" name="mail" size="24" /></li>
+                </br>
+                <li><label for="pass">Password:</label></li>
+                <li><input type="password" name="pass" size="12" /></li>
+                </br>
+                <li><input type="submit" name="login" value="Log in"></li>
+            </ul>
+        </form>
+	</section>
+	
+	<section class="registration">
+		<h2>Register</h2>
+        <form class="registration-card" onSubmit="return formValidation();">
+            <ul>
+                <li><label for="firstname">First name:</label></li>
+                <li><input type="text" name="firstname" size="12" /></li>
+                </br>
+                <li><label for="lastname">Last name:</label></li>
+                <li><input type="text" name="lastname" size="12" /></li>
+                </br>
+                <li><label for="mail">e-mail address:</label></li>
+                <li><input type="text" name="mail" size="24" /></li>
+                </br>
+                <li><label for="password">Password:</label></li>
+                <li><input type="password" name="password"></li>
+                </br>
+                <li><label for="repassword">Repeat password:</label></li>
+                <li><input type="password" name="repassword"></li>
+                </br>
+                <li><label for="class">Class:</label></li>
+                <li><select name="class">
+                <option selected="" value="Default">Please select your class:</option>
+                <option value="WebDev1st">Web Development, 1st sem.</option>
+                </select></li>
+                </br>
+                <li><input type="submit" name="registration" value="Register!"></li>
+            </ul>
+
+        </form>
+	</section>
+	
+</aside>
 </body>
 </html>
 

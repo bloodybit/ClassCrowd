@@ -2,41 +2,33 @@ header, section, aside, nav {
     display: block;
 }
 body {
-    font-family: Georgia, Times, serif;
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: white;
 }
+
 .wrapper {
-    width: 960px;
-    margin: 20px auto 20px auto;
-    background-color: beige;
+	position: absolute;
+    width: 1040px;
+    top: 0px;
+    left: 240px;
+    background-color: white;
 }
-header {
-    width: 960px;
-    height: 50px;
-    background-color: burlywood;
+
+aside {
+	position: fixed;
+    width: 216px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+	background-color: #34495E;
+	color: white;
 }
-h1 {
-    float: left;
-    margin-top: 8px;
-    margin-left: 5px;
+
+.input-field {
+	width: 212px;
+	margin-bottom: 12px;
 }
-nav {
-    float: left;
-    margin: 10px auto 10px 80px;
-    color: beige;
-}
-nav ul {
-    margin: 0px;
-    padding: 5px 0px 5px 30px;
-}
-nav li {
-    display: inline;
-    margin-right: 40px;
-}
-nav li a {
-    color: brown;
-}
-.login-card {
-    float: right;
-    margin-top: 15px;
-    margin-right: 5px;
-}
+
+

@@ -14,7 +14,6 @@
 </head>
 <body>
 
-
 <aside>
 	<!--
 	<div id="avatar">
@@ -27,22 +26,22 @@
 	-->
 
 	<section class="login">	
-	<h2>Login</h2>
-	<div id="message">
-		<?php
-			session_start();
+        <h2>Login</h2>
+        <div id="message">
+            <?php
+                session_start();
 
-			if(isset($_SESSION['message'])){
-				echo("<p>".$_SESSION['message']."</p>");
-				unset($_SESSION['message']);
-			}
-			?>
-</div>
-	<form class="login-card" action="Functions/LoginFunction.php" method="post">
-		<input type="text" name="mail" class="input-field" placeholder="Email">
-		<input type="password" name="pass" class="input-field" placeholder="Password">
-		<input type="submit" name="login" class="login login-submit" value="Log in">
-	</form>
+                if(isset($_SESSION['message'])){
+                    echo("<p>".$_SESSION['message']."</p>");
+                    unset($_SESSION['message']);
+                }
+                ?>
+        </div>
+        <form class="login-card" action="Functions/LoginFunction.php" method="post">
+            <input type="text" name="mail" class="input-field" placeholder="Email">
+            <input type="password" name="pass" class="input-field" placeholder="Password">
+            <input type="submit" name="login" class="login login-submit" value="Log in">
+        </form>
 	</section>
 	
 	<section class="register">
@@ -51,21 +50,6 @@
 	</section>
 	
 </aside>
-
-
-<div class="wrapper">
-
-
-        
-            </header>
-    <section class="welcome">
-        <article></article>
-    </section>
-    <div>
-
-    </div>
-</div>
-
 </body>
 </html>
 

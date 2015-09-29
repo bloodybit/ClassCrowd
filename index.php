@@ -46,13 +46,18 @@
 	
 	<section class="register">
 		<h2>Register</h2>
-        <form name="registration" onSubmit="return formValidation();>
-            <input type="text" name="firstname" placeholder="First name">
-            <input type="text" name="lastname" placeholder="Last name">
-            <input type="text" name="mail" placeholder="e-mail address">
-            <input type="password" name="pass" placeholder="Password">
-            <input type="password" name="repass" placeholder="Repeat password">
-            <input type="submit" name="register" class="login login-submit" value="Register">
+        <form name="registration" onSubmit="return formValidation();">
+            <ul>
+                <li><label for="firstname">First name:</label></li>
+                <li><input type="text" name="firstname" size="12" /></li>
+                <li><label for="lastname">Last name:</label></li>
+                <li><input type="text" name="lastname" size="12" /></li>
+                <li><label for="mail">e-mail address:</label></li>
+                <li><input type="text" name="mail" size="24" /></li>
+                <li><label for="password">Password:</label></li>
+                <li><input type="password" name="password"></li>
+            </ul>
+
         </form>
 	</section>
 	

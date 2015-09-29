@@ -70,8 +70,3 @@ function pass_validation(pass, repass) {
     }
     return true;
 }
-
-
-
-
-

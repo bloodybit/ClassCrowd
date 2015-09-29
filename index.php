@@ -12,7 +12,7 @@
     <title>ClassCrowd</title>
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <script src="js/registrationCheck.js"></script>
+    <script src="registrationCheck.js"></script>
 </head>
 <body>
 

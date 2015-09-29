@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if($_COOKIE['id']==$_SESSION['id']){
+        header("Location:main.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

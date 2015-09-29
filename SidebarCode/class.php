@@ -1,15 +1,8 @@
 <h2>Classes</h2>
 
 <?php
+    require_once(__DIR__."../Class2/classs.php");
     session_start();
-    require_once '../Class2/classs.php';
-
-echo"ee";
-    $classes = Classs::getClasses(10);
-
-    print_r($classes);
-      echo "ciao";
-
+    echo "Ciao";
 ?>
-
 <a href="main.php?sidebar=subject">Subject</a>

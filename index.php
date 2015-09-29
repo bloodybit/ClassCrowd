@@ -43,31 +43,31 @@
                 <li><input type="text" name="mail" size="24" /></li>
                 </br>
                 <li><label for="pass">Password:</label></li>
-                <li><input type="password" name="pass" size="12" /></li>
+                <li><input type="password" name="pass" size="24" /></li>
                 </br>
                 <li><input type="submit" name="login" value="Log in"></li>
             </ul>
         </form>
 	</section>
-	
+	</br>
 	<section class="registration">
 		<h2>Register</h2>
         <form class="registration-card" onSubmit="return formValidation();">
             <ul>
                 <li><label for="firstname">First name:</label></li>
-                <li><input type="text" name="firstname" size="12" /></li>
+                <li><input type="text" name="firstname" size="14" /></li>
                 </br>
                 <li><label for="lastname">Last name:</label></li>
-                <li><input type="text" name="lastname" size="12" /></li>
+                <li><input type="text" name="lastname" size="14" /></li>
                 </br>
                 <li><label for="mail">e-mail address:</label></li>
                 <li><input type="text" name="mail" size="24" /></li>
                 </br>
                 <li><label for="password">Password:</label></li>
-                <li><input type="password" name="password"></li>
+                <li><input type="password" name="password" size="24"></li>
                 </br>
                 <li><label for="repassword">Repeat password:</label></li>
-                <li><input type="password" name="repassword"></li>
+                <li><input type="password" name="repassword" size="24"></li>
                 </br>
                 <li><label for="class">Class:</label></li>
                 <li><select name="class">

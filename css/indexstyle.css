@@ -26,6 +26,15 @@ aside {
 	color: white;
 }
 
+form li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+form ul li select {
+    width: 164px;
+}
+
 .input-field {
 	width: 212px;
 	margin-bottom: 12px;

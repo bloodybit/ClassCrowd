@@ -1,3 +1,6 @@
+html {
+    font-family: 'Lato', Arial, sans-serif;
+}
 header, section, aside, nav {
     display: block;
 }
@@ -6,16 +9,63 @@ body {
     background-color: white;
 }
 
+@keyframes animatedBackground {
+	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
+	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
+}
+@-moz-keyframes animatedBackground {
+	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
+	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
+}
+@-webkit-keyframes animatedBackground {
+	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
+	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
+}
+@-ms-keyframes animatedBackground {
+	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
+	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
+}
+@-o-keyframes animatedBackground {
+	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
+	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
+}
+ 
 .wrapper {
 	position: absolute;
-    width: 1040px;
     top: 0px;
-    left: 240px;
-    background-color: white;
+    left: 300px;
+    height: 100%;
+    width: -moz-calc(100% - 300px);
+    width: -webkit-calc(100% - 300px);
+    width: calc(100% - 300px);
+    text-align: center; 
+    color: white;
+	background: url(../images/splash.jpg) no-repeat center center; 
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	animation: animatedBackground 10s ease-out;
+	-moz-animation: animatedBackground 10s ease-out;
+	-webkit-animation: animatedBackground 10s ease-out;
+	-ms-animation: animatedBackground 10s ease-out;
+	-o-animation: animatedBackground 10s ease-out;
 }
+
+
+#index-info {
+	width: 600px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 60pt;
+}
+
 aside {
+	z-index: 100;
 	position: fixed;
-    width: 216px;
+    width: 276px;
     padding-left: 12px;
     padding-right: 12px;
     height: 100%;
@@ -23,19 +73,81 @@ aside {
     left: 0px;
 	background-color: #34495E;
 	color: white;
+	text-align: center;
 }
 
+footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: #7F8C8D;
+}
 
+#byline {
+	font-size: 10pt;
+}
 
+.login-wrap {
+	margin-top: 48px;
+}
 
+.register-wrap {
+	margin-top: 96px;
+}
 
 
 .login-card {
 }
 
-.input-field {
+input {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border: none;
+	padding: 8px 12px;
 	width: 212px;
+	text-align: center;
+}
+
+input[type=submit]  {
+	background-color: #1ABC9C;
+	color: white;
+}
+
+.input-field {
+	width: 190px;
 	margin-bottom: 12px;
+    color: #34495E;
+    border-radius: 6px;
+    box-shadow: none;
+    -webkit-transition: color .25s linear,background-color .25s linear;
+    transition: color .25s linear,background-color .25s linear;
+
+
+}
+
+.error-message {
+	color: #E74C3C;
+}
+
+.input-field:focus {
+    outline: none;
+    background-color: #BDC3C7;
+    color: #2C3E50;
+}
+
+input[type=submit]:focus {
+	outline: none;
+    background-color: #16A085;
+    color: white;
+}
+
+input[type=submit]:hover {
+	outline: none;
+    background-color: #16A085;
+    color: white;
 }
 
 

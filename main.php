@@ -2,6 +2,7 @@
 require_once 'Functions/LoadDiv.php';
 
 session_start();
+
     if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
         $_SESSION['message'] = "Your not allow to see this section";
         header("Location:index.php");

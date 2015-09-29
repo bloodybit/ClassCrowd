@@ -10,8 +10,13 @@ session_start();
 
 <h1>MAIN</h1>
 
+<h1>Sidebar</h1>
 <div id="sidebar">
     <?php loadSidebar($_GET['sidebar'], 'class'); ?>
 </div>
 
+<h1>Content</h1>
+<div id="content">
+    <?php loadContent($_GET['content'], 'empty'); ?>
+</div>
 <a href="Functions/LogoutFunction.php">Logout</a>

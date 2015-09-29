@@ -14,7 +14,6 @@
 </head>
 <body>
 
-
 <aside>
 	<!--
 	<div id="avatar">
@@ -25,6 +24,7 @@
 		</div>
 	</div>
 	-->
+
 
 	<section class="login-wrap">	
 		<h2>Login</h2>
@@ -47,7 +47,33 @@
 	
 	<section class="register-wrap">
 		<h2>Register</h2>
-		<input type="submit" name="register" class="login login-submit" value="Register">
+        <form class="registration-card" onSubmit="return formValidation();">
+            <ul>
+                <li><label for="firstname">First name:</label></li>
+                <li><input type="text" name="firstname" size="14" /></li>
+
+                <li><label for="lastname">Last name:</label></li>
+                <li><input type="text" name="lastname" size="14" /></li>
+
+                <li><label for="mail">e-mail address:</label></li>
+                <li><input type="text" name="mail" size="24" /></li>
+
+                <li><label for="password">Password:</label></li>
+                <li><input type="password" name="password" size="24"></li>
+
+                <li><label for="repassword">Repeat password:</label></li>
+                <li><input type="password" name="repassword" size="24"></li>
+
+                <li><label for="class">Class:</label></li>
+                <li><select name="class">
+                <option  value="Default">Please select your class:</option>
+                <option value="WebDev1st">Web Development, 1st sem.</option>
+                </select></li>
+
+                <li><input type="submit" name="registration" value="Register!"></li>
+            </ul>
+
+        </form>
 	</section>
 	
 	<footer>
@@ -56,6 +82,7 @@
 	</footer>
 	
 </aside>
+
 
 
 <div class="wrapper animatedBackground">

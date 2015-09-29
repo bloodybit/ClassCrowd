@@ -20,6 +20,16 @@
             <input type="password" name="pass" placeholder="Password">
             <input type="submit" name="login" class="login login-submit" value="Log in">
         </form>
+        <div id="message">
+            <?php
+            session_start();
+
+            if(isset($_SESSION['message'])){
+                echo("<h4>".$_SESSION['message']."</h4>");
+                unset($_SESSION['message']);
+            }
+            ?>
+        </div>
     </header>
     <section class="welcome">
         <article></article>

@@ -9,17 +9,17 @@ class Database
      * User name to connect to database
      * @var string $_mysqlUser
      */
-    private static $_mysqlUser = 'php24sql';
+    private static $_mysqlUser = 'messina';
     /**
      * Password to connect to database
      * @var string $_mysqlPass
      */
-    private static $_mysqlPass = 'hJQV8RTe5t';
+    private static $_mysqlPass = 'messinatirovina';
     /**
      * Database name
      * @var string $_mysqlDb
      */
-    private static $_mysqlDb = 'smithside';
+    private static $_mysqlDb = 'ClassCrowd';
     /**
      * Hostname for the server
      * @var string $_hostName

@@ -46,7 +46,14 @@
 	
 	<section class="register">
 		<h2>Register</h2>
-		<input type="submit" name="register" class="login login-submit" value="Register">
+        <form action="register.php" method="post">
+            <input type="text" name="firstname" placeholder="First name">
+            <input type="text" name="lastname" placeholder="Last name">
+            <input type="text" name="mail" placeholder="e-mail address">
+            <input type="password" name="pass" placeholder="Password">
+            <input type="password" name="repass" placeholder="Repeat password">
+            <input type="submit" name="register" class="login login-submit" value="Register">
+        </form>
 	</section>
 	
 </aside>

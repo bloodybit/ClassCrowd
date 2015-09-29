@@ -13,6 +13,7 @@ body {
     left: 240px;
     background-color: white;
 }
+
 aside {
 	position: fixed;
     width: 216px;
@@ -23,14 +24,6 @@ aside {
     left: 0px;
 	background-color: #34495E;
 	color: white;
-}
-
-
-
-
-
-
-.login-card {
 }
 
 .input-field {

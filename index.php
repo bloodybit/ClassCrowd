@@ -46,7 +46,7 @@
 	
 	<section class="register">
 		<h2>Register</h2>
-        <form action="register.php" method="post">
+        <form name="registration" onSubmit="return formValidation();>
             <input type="text" name="firstname" placeholder="First name">
             <input type="text" name="lastname" placeholder="Last name">
             <input type="text" name="mail" placeholder="e-mail address">

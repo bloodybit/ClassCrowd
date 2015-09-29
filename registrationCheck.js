@@ -1,72 +1,67 @@
 /**
  * Created by albertoanceschi on 29/09/15.
  */
-function formValidation() {
-    var fname = document.registration.firstname;
-    var lname = document.registration.lastname;
-    var email = document.registration.mail;
-    var pass = document.registration.password;
-    var repass = document.registration.repassword;
-    var uclass = document.registration.class;
 
-    if (fname_validation(fname)) {
-        if (lname_validation(lname)) {
-            if (email_validation(email)) {
-                if (pass_validation(pass, repass)) {
+var elFirst = document.getElementById('firstname');
+var elLast = document.getElementById('lastname');
+var elMail = document.getElementById('mail');
+var elPass = document.getElementById('password');
+var elRepass = document.getElementById('repassword');
 
-                }
-            }
-        }
-    }
+var firstMsg = document.getElementById('firstFeedback');
+var lastMsg = document.getElementById('lastFeedback');
+var mailMsg = document.getElementById('mailFeedback');
+var passMsg = document.getElementById('passFeedback');
+var repassMsg = document.getElementById('repassFeedback');
 
-    return false;
-
-}
-
-function fname_validation(fname) {
-    var fname_len = fname.value.length;
-    if (fname_len == 0 ) {
-        alert("First name should not be empty");
-        fname.focus();
-        return false;
-    }
-    return true;
-}
-
-function lname_validation(lname) {
-    var lname_len = lname.value.length;
-    if (lname_len == 0 ) {
-        alert("Last name should not be empty");
-        lname.focus();
-        return false;
-    }
-    return true;
-}
-
-function email_validation(email) {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (email.value.match(mailformat)) {
-        return true;
+function firstname_validation() {
+    if (elFirst.value.length < 2) {
+        firstMsg.innerHTML = 'First name must be 3 characters or more';
     } else {
-        alert("You have entered an invalid email address");
-        email.focus();
-        return false;
+        firstMsg.innerHTML = '';
     }
 }
 
-function pass_validation(pass, repass) {
-    var pass_len = pass.value.length;
-    var repass_len = repass.value.length;
-    if (pass_len == 0 || repass_len == 0) {
-        alert("Password should not be empty");
-        pass.focus();
-        repass.focus();
-        return false;
-    } else if (pass != repass) {
-        alert("Passwords should be the same");
-        pass.focus();
-        repass.focus();
-        return false;
+function lastname_validation() {
+    if (elLast.value.length < 2) {
+        lastMsg.innerHTML = 'Last name must be 3 characters or more';
+    } else {
+        lastMsg.innerHTML = '';
     }
-    return true;
 }
+
+function mail_validation() {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!elMail.value.match(mailformat)) {
+        mailMsg.innerHTML = 'Email address not valid';
+    } else {
+        mailMsg.innerHTML = '';
+    }
+}
+
+function password_validation() {
+    if (elPass.value.length < 6) {
+        passMsg.innerHTML = 'Password must be 6 characters or more';
+    } else {
+        passMsg.innerHTML = '';
+    }
+}
+
+function repassword_validation() {
+    if (elPass != elRepass) {
+        repassMsg.innerHTML = 'Passwords are different'
+    } else {
+        repassMsg.innerHTML = '';
+    }
+}
+
+elFirst.addEventListener('blur', function() { firstname_validation(); }, false);
+
+elLast.addEventListener('blur', function() { lastname_validation(); }, false);
+
+elMail.addEventListener('blur', function() { mail_validation(); }, false);
+
+elPass.addEventListener('blur', function() { password_validation(), false});
+
+elRepass.addEventListener('blur', function() { repassword_validation(), false});
+

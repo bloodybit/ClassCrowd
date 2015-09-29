@@ -12,7 +12,6 @@
     <title>ClassCrowd</title>
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <script src="registrationCheck.js"></script>
 </head>
 <body>
 
@@ -49,32 +48,30 @@
 	
 	<section class="register-wrap">
 		<h2>Register</h2>
-        <form class="registration-card" onSubmit="return formValidation();">
-            <ul>
-                <li><label for="firstname">First name:</label></li>
-                <li><input type="text" name="firstname" size="14" /></li>
+        <form class="registration-card">
 
-                <li><label for="lastname">Last name:</label></li>
-                <li><input type="text" name="lastname" size="14" /></li>
+			<input type="text" id="firstname" class="input-field" placeholder="First name" />
+			<div id="firstFeedback" class="error-message"></div>
 
-                <li><label for="mail">e-mail address:</label></li>
-                <li><input type="text" name="mail" size="24" /></li>
+			<input type="text" id="lastname" class="input-field" placeholder="Last name" />
+			<div id="lastFeedback" class="error-message"></div>
 
-                <li><label for="password">Password:</label></li>
-                <li><input type="password" name="password" size="24"></li>
+			<input type="text" id="mail" class="input-field" placeholder="Email address" />
+			<div id="mailFeedback" class="error-message"></div>
 
-                <li><label for="repassword">Repeat password:</label></li>
-                <li><input type="password" name="repassword" size="24"></li>
+			<input type="password" id="password" class="input-field" placeholder="New Password" />
+			<div id="passFeedback" class="error-message"></div>
 
-                <li><label for="class">Class:</label></li>
-                <li><select name="class">
-                <option  value="Default">Please select your class:</option>
+			<input type="password" id="repassword" class="input-field" placeholder="Repeat Password" />
+			<div id="repassFeedback" class="error-message"></div>
+
+			<select id="studentClass">
+				<option value="Default">Please select your class:</option>
                 <option value="WebDev1st">Web Development, 1st sem.</option>
-                </select></li>
+			</select>
+			<div id="classFeedback" class="error-message"></div>
 
-                <li><input type="submit" name="registration" value="Register!"></li>
-            </ul>
-
+			<input type="submit" name="registration" value="Sign up">
         </form>
 	</section>
 	
@@ -97,6 +94,7 @@
 	</div>
 </div>
 
+<script src="registrationCheck.js"></script>
 </body>
 </html>
 

@@ -1,8 +1,9 @@
 <?php
-    /*session_start();
-    if($_COOKIE['id']==$_SESSION['id']){
+    session_start();
+
+    if($_COOKIE['id']==$_SESSION['id'] && isset($_COOKIE['id'])){
         header("Location:main.php");
-    }*/
+    }
 ?>
 
 <!DOCTYPE html>

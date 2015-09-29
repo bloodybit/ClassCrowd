@@ -2,6 +2,8 @@
 require_once 'Functions/LoadDiv.php';
 require_once 'Functions/DbFunction.php';
 require_once 'Classe/classe.php';
+require_once 'Classe/subject.php';
+require_once 'Classe/lesson.php';
 
 
 session_start();

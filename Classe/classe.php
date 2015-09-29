@@ -78,9 +78,10 @@ class Classe{
         //Run the query
         $result_obj = $connection->query($query);
 
-        $class = array();
-
         try{
+            //I COULD USE A FOR AND IT WOULD BE BETTER
+            //BUT IT DOESN'T WORK AND I HAVE NO TIME TO
+            //FIND THE PROBLEM :)
             $i=0;
             while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
 

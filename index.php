@@ -38,9 +38,15 @@
                 ?>
         </div>
         <form class="login-card" action="Functions/LoginFunction.php" method="post">
-            <input type="text" name="mail" class="input-field" placeholder="Email">
-            <input type="password" name="pass" class="input-field" placeholder="Password">
-            <input type="submit" name="login" class="login login-submit" value="Log in">
+            <ul>
+                <li><label for="mail">e-mail address:</label></li>
+                <li><input type="text" name="mail" size="24" /></li>
+                </br>
+                <li><label for="pass">Password:</label></li>
+                <li><input type="password" name="pass" size="12" /></li>
+                </br>
+                <li><input type="submit" name="login" value="Log in"></li>
+            </ul>
         </form>
 	</section>
 	

@@ -2,13 +2,13 @@
 
 <?php
     session_start();
-//  –––  require_once '../Class2/classs.php';
+    require_once '../Class2/classs.php';
 
-//echo"ee";
-//    $classes = Classs::getClasses(10);
-//
-//    //print_r($classes);
-//    echo "ciao";
+echo"ee";
+    $classes = Classs::getClasses(10);
+
+    print_r($classes);
+      echo "ciao";
 
 ?>
 

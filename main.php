@@ -1,5 +1,8 @@
 <?php
 require_once 'Functions/LoadDiv.php';
+require_once 'Functions/DbFunction.php';
+require_once 'Classe/classe.php';
+
 
 session_start();
 

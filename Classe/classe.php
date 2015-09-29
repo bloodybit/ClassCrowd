@@ -6,9 +6,8 @@
  * Time: 14:55
  */
 
-require_once '../Functions/DbFunction.php';
 
-class Classs{
+class Classe{
 
     public $id;
     public $class;
@@ -68,10 +67,8 @@ class Classs{
     }
 
     public static function getClasses($numRow){
-
-        echo "dd";
         //clear the result
-        $classes ='';
+        $classes = array();
 
         //Get the connection
         $connection = Database::getConnection();
@@ -81,13 +78,17 @@ class Classs{
         //Run the query
         $result_obj = $connection->query($query);
 
+        $class = array();
+
         try{
+            $i=0;
             while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
-                $classes = new Classs($result);
+
+                $classes[$i] =  new Classe($result);
+                $i++;
             }
 
             //Pass back the results
-            print_r($classes);
             return $classes;
         }
         catch(Exception $e){

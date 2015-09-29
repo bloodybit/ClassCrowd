@@ -1,8 +1,9 @@
 <h2>Classes</h2>
 
 <?php
-    require_once(__DIR__ . "../Class2/classs.php");
-    session_start();
-    echo "Ciao";
+    $classes = Classe::getClasses(10);
+
+    foreach($classes as $class){
+        echo ('<br> <a href="main.php?sidebar=subject&class_id='.$class->getId() . '">' . $class->getClass() .'</a>');
+    }
 ?>
-<a href="main.php?sidebar=subject">Subject</a>

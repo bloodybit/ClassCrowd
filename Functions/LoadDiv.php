@@ -18,6 +18,8 @@ session_start();
 
 function loadSidebar($sidebar, $default){
 
+    $sidebar = filter_var($sidebar, FILTER_SANITIZE_STRING);
+
     //Get content from the url
     if(isset($_GET['sidebar'])){
         $sidebar = $_GET['sidebar'];
@@ -31,6 +33,27 @@ function loadSidebar($sidebar, $default){
     if($sidebar) {
         //include the sidebar selected
         $html = include 'SidebarCode/'.$sidebar.'.php';
+        return $html;
+    }
+}
+
+function loadContent($content, $default){
+
+    //sanitizing content
+    $content = filter_var($content, FILTER_SANITIZE_STRING);
+
+    //Get content from the url
+    if(isset($_GET['content'])){
+        $content = $_GET['content'];
+        //sanitize a little bit
+        $content = filter_var($content, FILTER_SANITIZE_STRING);
+    }
+
+    $content = empty($content)? $default : $content;
+
+    if($content){
+        //include the content selected
+        $html = include 'ContentCode/'.$content.'.php';
         return $html;
     }
 }

@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>ClassCrowd</title>
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
@@ -50,12 +50,24 @@
             <ul>
                 <li><label for="firstname">First name:</label></li>
                 <li><input type="text" name="firstname" size="12" /></li>
+                </br>
                 <li><label for="lastname">Last name:</label></li>
                 <li><input type="text" name="lastname" size="12" /></li>
+                </br>
                 <li><label for="mail">e-mail address:</label></li>
                 <li><input type="text" name="mail" size="24" /></li>
+                </br>
                 <li><label for="password">Password:</label></li>
                 <li><input type="password" name="password"></li>
+                </br>
+                <li><label for="repassword">Repeat password:</label></li>
+                <li><input type="password" name="repassword"></li>
+                </br>
+                <li><label for="class">Class:</label></li>
+                <li><select name="class">
+                <option selected="" value="Default">Please select your class:</option>
+                <option value="WebDev1st">Web Development, 1st sem.</option>
+                </select></li>
             </ul>
 
         </form>

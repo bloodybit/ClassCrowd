@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>ClassCrowd</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">

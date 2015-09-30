@@ -20,6 +20,7 @@ session_start();
 <html>
 <head>
     <title>ClassCrowd</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
     <link rel="stylesheet" type="text/css" href="css/contentstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>

@@ -2,16 +2,17 @@
 /**
  * Created by IntelliJ IDEA.
  * User: riccardosibani
- * Date: 29/09/15
- * Time: 14:55
+ * Date: 30/09/15
+ * Time: 11:06
  */
 
-
-class Classe{
+class Bullet{
 
     public $id;
-    public $class;
+    public $lecture_id;
+    public $bullet_id;
     public $user_id;
+    public $date;
     public $deleted = false;
 
     function __construct($input = false){
@@ -24,41 +25,41 @@ class Classe{
         }
     }
 
-    function withClassAndUser($class, $user_id){
-        $this->class = $class;
+    function withLessonBulletAndUser($lecture_id, $bullet_id, $user_id){
+        $this->lecture_id = $lecture_id;
+        $this->bullet = $bullet_id;
         $this->user_id = $user_id;
-    }
-
-    function withDelete($class, $user_id, $delete){
-        $this->withClassAndUser($class, $user_id);
-        $this->deleted = $delete;
     }
 
     function getId(){
         return $this->id;
     }
 
-    function setId($id){
-        $this->id = $id;
+    function getLectureId(){
+        return $this->lecture_id;
     }
 
-    function getClass(){
-        return $this->class;
+    function setLecture($lecture_id){
+        $this->lecture_id = $lecture_id;
     }
 
-    function setClass($class){
-        $this->class = $class;
+    function getBullet(){
+        return $this->bullet;
     }
 
-    function getUserId(){
+    function setBullet($bullet_id){
+        $this->bullet_id = $bullet_id;
+    }
+
+    function getUser(){
         return $this->user_id;
     }
 
-    function setUserId($user_id){
+    function setUser($user_id){
         $this->user_id = $user_id;
     }
 
-    function getDeleted(){
+    function isDeleted(){
         return $this->deleted;
     }
 
@@ -66,16 +67,18 @@ class Classe{
         $this->deleted = true;
     }
 
-    public static function getClasses(){
-        //clear the result
-        $classes = array();
+    static function getBulletsByLesson($lecture_id){
+        //clear all the results
+        $bullets = array();
 
-        //Get the connection
         $connection = Database::getConnection();
 
-        $query = 'SELECT  * FROM    class WHERE   deleted = false ORDER BY class ASC';
+        $query = "SELECT * FROM bullet WHERE deleted=false AND lecture_id=".$lecture_id." ORDER BY date ASC";
 
-        //Run the query
+        //Print and test the query
+        //echo $query;
+
+        //run the query
         $result_obj = $connection->query($query);
 
         try{
@@ -84,17 +87,14 @@ class Classe{
             //FIND THE PROBLEM :)
             $i=0;
             while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
-
-                $classes[$i] =  new Classe($result);
+                $bullets[$i] = new Bullet($result);
                 $i++;
             }
 
-            //Pass back the results
-            return $classes;
-        }
-        catch(Exception $e){
+            //Pass back the result
+            return $bullets;
+        } catch(Exception $e){
             $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
         }
-
     }
 }

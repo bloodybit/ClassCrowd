@@ -4,6 +4,7 @@ require_once 'Functions/DbFunction.php';
 require_once 'Classe/classe.php';
 require_once 'Classe/subject.php';
 require_once 'Classe/lesson.php';
+require_once 'Classe/bullet.php';
 
 
 session_start();

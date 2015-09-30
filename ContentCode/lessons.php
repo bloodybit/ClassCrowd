@@ -16,7 +16,7 @@ if(isset($_GET['subject_id'])){
 
 
 
-<h1><?php echo($subjectName); ?>'s Lessons</h1>
+<h2><?php echo($subjectName); ?>'s Lessons</h2>
 <?php
     $lessonsList = Lesson::getLessonsBySubjectId($_GET['subject_id']);
 
@@ -42,8 +42,8 @@ if(isset($_GET['subject_id'])){
 									$subjectName = Subject::getSubjectById($lesson->getSubjectId());
 									$className = Classe::getNameById($subjectName->getId());
 
-									echo $subjectName->getSubject();
-									echo $className;
+									echo $className . ' <span class = "lesson_class_name"> / ' . $subjectName->getSubject() . "</span>";
+								
 									?> </p>
 
 

@@ -45,7 +45,7 @@ $query = mysql_query("SELECT * FROM lesson ORDER BY id DESC");
 		<p class="lesson_day"> <?php echo $day; ?> </p>
 		<p class="lesson_month"> <?php echo $month; ?> </p>
 		<p class="lesson_subject"> <?php 
-									echo $sub_name . ' <span class = "lesson_class_name"> / ' . $class_name . "</span>"; 
+									echo $class_name . ' <span class = "lesson_class_name"> / ' . $sub_name . "</span>"; 
 
 									?> </p>
 		<p class="lesson_title"> <?php echo $title; ?> </p>

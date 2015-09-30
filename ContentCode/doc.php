@@ -20,10 +20,15 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
     foreach($bullets as $bullet){
         echo '<li>'.$bullet->getBullet().'</li>';
 
-//
-//        //2) get Text in each bullets
-//        $texts = Text::getTextByBullet($bullet->getId());
 
+            //2) get Text in each bullets
+            $texts = Text::getTextByBullet($bullet->getId());
+
+            //3) get Code in each bullets
+            $codes = Code::getCodeBybullet($bullet->getId());
+
+            //4) get Photos in each bullets
+            $photos =
     }
 ?>
 </ul>

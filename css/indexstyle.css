@@ -53,6 +53,29 @@ body {
 }
 
 
+#aside-overflow {
+	margin-top: 24px;
+    height: -moz-calc(100% - 112px);
+    height: -webkit-calc(100% - 112px);
+    height: calc(100% - 112px);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+/* Scrollbar */ 
+
+::-webkit-scrollbar{width: 12px;}
+
+::-webkit-scrollbar-thumb{background-color:rgb(44, 62, 80); border-radius: 6px;}
+::-webkit-scrollbar-thumb:hover{background-color:#7F8C8D;}
+
+::-webkit-scrollbar-track{background-color:rgb(52, 73, 94,0);}
+
+
+/* End Scrollbar */
+
+
 #index-info {
 	width: 600px;
 	margin: 0 auto;
@@ -90,11 +113,11 @@ footer {
 }
 
 .login-wrap {
-	margin-top: 48px;
+	margin-top: 0px;
 }
 
 .register-wrap {
-	margin-top: 96px;
+	margin-top: 48px;
 }
 
 input, select {

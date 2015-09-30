@@ -12,20 +12,12 @@
     <title>ClassCrowd</title>
     <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <aside>
-	<!--
-	<div id="avatar">
-		<img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
-		<div id="avatar-txt">
-			<p class="cut-text"><b>asdf</b></p>
-			<p class="cut-text">5915web1ei</p>
-		</div>
-	</div>
-	-->
-
+	<div id="aside-overflow">
 
 	<section class="login-wrap">	
 		<h2>Login</h2>
@@ -77,9 +69,10 @@
 	
 	<footer>
 		<p>ClassCrowd</p>
-		<p id="byline">Made with love by<br>Alberto, Anders, Riccardo, Viesturs</p>
+		<p id="byline">Made with <i class="fa fa-heart"></i> by<br>Alberto, Anders, Riccardo, Viesturs</p>
 	</footer>
 	
+	</div>
 </aside>
 
 

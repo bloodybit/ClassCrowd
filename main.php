@@ -14,15 +14,48 @@ session_start();
     }
 ?>
 
-<h1>MAIN</h1>
 
-<h1>Sidebar</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClassCrowd</title>
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<aside>
+
 <div id="sidebar">
     <?php loadSidebar($_GET['sidebar'], 'class'); ?>
 </div>
+
+
+</aside>
+
+
+
+
+<div class="wrapper">
 
 <h1>Content</h1>
 <div id="content">
     <?php loadContent($_GET['content'], 'empty'); ?>
 </div>
 <a href="Functions/LogoutFunction.php">Logout</a>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

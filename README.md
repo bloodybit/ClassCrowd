@@ -1,11 +1,12 @@
 # ClassCrowd
 EAL Hackaton
 
-Made by:
+Group 2:
 * Alberto
 * Anders P
 * Riccardo
 * Viesturs
+
 
 ------------
 

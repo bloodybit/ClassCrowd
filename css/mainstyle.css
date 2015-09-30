@@ -9,7 +9,35 @@ body {
     background-color: white;
 }
 
- 
+a {
+	color: #1ABC9C
+	
+}
+
+
+#aside-overflow {
+	margin-top: 24px;
+    height: -moz-calc(100% - 234px);
+    height: -webkit-calc(100% - 234px);
+    height: calc(100% - 234px);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+/* Scrollbar */ 
+
+::-webkit-scrollbar{width: 12px;}
+
+::-webkit-scrollbar-thumb{background-color:rgb(44, 62, 80); border-radius: 6px;}
+::-webkit-scrollbar-thumb:hover{background-color:rgb(22, 160, 133);}
+
+::-webkit-scrollbar-track{background-color:rgb(52, 73, 94,0);}
+
+
+/* End Scrollbar */
+
+
 .wrapper {
 	position: absolute;
     top: 0px;
@@ -66,7 +94,7 @@ footer {
 	width: 288px;;
 	height: 84px;
 	padding-left: 12px;
-	border-bottom: 1px solid #95A5A6;
+	border-bottom: 2px solid #2C3E50;
 }
 #avatar-pic {
 	position: absolute;
@@ -81,22 +109,26 @@ footer {
 	position: absolute;
 	font-size: 12pt;
 	line-height: 20px;
-	margin-top: -12px;
+	margin-top: 0px;
 	left: 84px;
     width: -moz-calc(100% - 96px);
     width: -webkit-calc(100% - 96px);
     width: calc(100% - 96px);
 }
-
+#avatar-txt p {
+	margin-top: -6px;
+}
 .cut-text {
 	text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
+.logout {
+}
+
 
 .sidebar-wrap {
-	margin-top: 96px;
 }
 
 

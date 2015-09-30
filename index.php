@@ -20,7 +20,7 @@
 	<div id="aside-overflow">
 
 	<section class="login-wrap">	
-		<h2>Login</h2>
+		<h2>Existing user</h2>
 		<form class="login-card" action="Functions/LoginFunction.php" method="post">
 			<input type="text" name="mail" class="input-field" placeholder="Email">
 			<input type="password" name="pass" class="input-field" placeholder="Password">
@@ -28,7 +28,7 @@
 		</form>
 		<div class="error-message">
 			<?php
-				session_start();
+				//session_start();
 	
 				if(isset($_SESSION['message'])){
 					echo("<p>".$_SESSION['message']."</p>");
@@ -39,7 +39,7 @@
 	</section>
 	
 	<section class="register-wrap">
-		<h2>Register</h2>
+		<h2>New user</h2>
         <form class="registration-card">
 
 			<input type="text" id="firstname" class="input-field" placeholder="First name" />
@@ -79,7 +79,7 @@
 
 <div class="wrapper animatedBackground">
 	<div id="index-info">
-		<br><br><br><br><br>
+		
 		<h1>ClassCrowd</h1>
 		<p>ClassCrowd is an online collaborative notebook for you and your class.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

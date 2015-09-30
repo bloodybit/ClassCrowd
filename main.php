@@ -33,8 +33,25 @@ session_start();
 	<section class="avatar-wrap">
 		<img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
 		<div id="avatar-txt">
-			<p class="cut-text"><b> <!--Anders Preben Pedersen --></b></p>
-			<p class="cut-text">Class: WebDev 1</p>
+			<p class="cut-text"><b> 
+
+					<?php  //user NAME and SURNAME
+		 				$user = User::getUserById($_COOKIE['id']);
+		 				echo $user->name . " " . $user->surname;
+
+					?>
+			</b></p>
+			<p class="cut-text">Class: 
+
+					<?php 
+						$className = Classe::getNameByUserId($_COOKIE['class_id']);
+						echo $className;
+
+
+					?>
+
+			</p>
+					
 			<p class="logout"><a href="Functions/LogoutFunction.php"><i class="fa fa-sign-out"></i> Log out</a></p>
 		</div>
 	</section>

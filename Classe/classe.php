@@ -75,6 +75,35 @@ class Classe{
             $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
         }
     }
+
+   
+
+    public static function getNameByUserId($class_id){
+        //clear the result
+        $className;
+        $connection = Database::getConnection();
+        $query = "SELECT class FROM class WHERE id=".$class_id;
+        //echo $query;
+        $result_obj = $connection->query($query);
+        try{
+            //I COULD USE A FOR AND IT WOULD BE BETTER
+            //BUT IT DOESN'T WORK AND I HAVE NO TIME TO
+            //FIND THE PROBLEM :)
+            //SHOULD BE ONLY ONE ELEMENT FOR SURE
+            $i=0;
+            while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
+                $className = new Classe($result);
+                $i++;
+            }
+            //pass back the result
+            return $className->getClass();
+        } catch(Exception $e){
+            $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
+        }
+    }
+
+
+
     public static function getNameById($class_id){
         //clear the result
         $className = '';

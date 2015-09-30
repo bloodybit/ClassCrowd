@@ -100,4 +100,30 @@ class User{
 	function setDelete(){
 		$this->delete = true;
 	}
+
+
+
+	static function getUserById($id){
+		//clear the result
+		$class = new Classe();
+		$connection = Database::getConnection();
+		$query = 'SELECT * FROM user WHERE id='.$id;
+		//Run the query
+		$result_obj = $connection->query($query);
+		try{
+			//I COULD USE A FOR AND IT WOULD BE BETTER
+			//BUT IT DOESN'T WORK AND I HAVE NO TIME TO
+			//FIND THE PROBLEM :)
+			//SHOULD BE ONLY ONE RESULT
+			$i = 0;
+			while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
+				$class = new Classe($result);
+				$i++;
+			}
+			//pass back the result
+			return $class;
+		} catch(Exception $e){
+			$_SESSION['message'] = $e->getMessage(); //Not properly good for safety
+		}
+	}
 }

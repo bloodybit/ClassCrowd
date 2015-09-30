@@ -20,6 +20,7 @@ session_start();
 <head>
     <title>ClassCrowd</title>
     <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/contentstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -43,6 +44,7 @@ session_start();
 <div id="content">
     <?php loadContent($_GET['content'], 'empty'); ?>
 </div>
+
 <a href="Functions/LogoutFunction.php">Logout</a>
 
 

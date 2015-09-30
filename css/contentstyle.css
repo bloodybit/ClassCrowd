@@ -1,0 +1,64 @@
+.lesson_box{
+    position: relative;
+      font-family: 'Questrial', sans-serif;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	color: white;
+width: 200px;
+height: 200px;
+background-color:#04AAC0;
+margin:0px;
+float:left;
+margin-right:10px;
+margin-top:10px;
+}
+
+.lesson_box:hover{
+	transition: 0.1s;
+ 	border-bottom:5px solid #045673;
+}
+
+.lesson_box:hover .lesson_subject {
+ 	transition: 0.1s;
+ 	opacity: 1;
+}
+
+
+
+.lesson_day{
+	 margin:0px;
+    text-align: center;
+    font-size: 60px;
+    margin-top:30px;
+  
+}
+
+.lesson_month{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.lesson_title{
+    position: absolute;
+    font-size: 13px;
+    margin: 0px 0px 0px 5px;
+    bottom:5px;
+}
+
+.lesson_subject{
+	background: #045673;
+	opacity: .5;
+	padding:5px;
+	position: absolute;
+	top:2px;
+	margin:0px;
+}
+
+.lesson_class_name{
+	/*color:#032859;*/
+	font-size:12px;
+}

@@ -56,11 +56,12 @@ a:visited {
     top: 0px;
     left: 300px;
     height: 100%;
-    width: -moz-calc(100% - 300px);
-    width: -webkit-calc(100% - 300px);
-    width: calc(100% - 300px);
+    width: -moz-calc(100% - 336px);
+    width: -webkit-calc(100% - 336px);
+    width: calc(100% - 336px);
     color: #34495E;
-    padding-left: 12px;
+    padding-left: 24px;
+    padding-right: 12px;
 }
 
 

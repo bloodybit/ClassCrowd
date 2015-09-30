@@ -75,8 +75,6 @@
 	</div>
 </aside>
 
-
-
 <div class="wrapper animatedBackground">
 	<div id="index-info">
 		

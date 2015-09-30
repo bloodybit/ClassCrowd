@@ -10,8 +10,9 @@
  * This class allow to create user object in order to represent every single user and login function
  */
 
-class User{
-	
+class User
+{
+
 	public $id;
 	public $name;
 	public $surname;
@@ -20,7 +21,8 @@ class User{
 	public $class;
 	public $deleted;
 
-	function __construct($input = false){
+	function __construct($input = false)
+	{
 		if (is_array($input)) {
 			foreach ($input as $key => $val) {
 				// Note the $key instead of key.
@@ -30,7 +32,8 @@ class User{
 		}
 	}
 
-	function fullConstruct($name, $surname, $mail, $password, $class){
+	function fullConstruct($name, $surname, $mail, $password, $class)
+	{
 		$this->name = $name;
 		$this->surname = $surname;
 		$this->mail = $mail;
@@ -39,65 +42,80 @@ class User{
 		$this->deleted = false;
 	}
 
-	function withIdAndDeleted($id, $name, $surname, $mail, $password, $class, $deleted){
+	function withIdAndDeleted($id, $name, $surname, $mail, $password, $class, $deleted)
+	{
 		$this->fullConstruct($name, $surname, $mail, $password, $class);
 		$this->id = $id;
 		$this->deleted = $deleted;
 	}
 
-	function getId(){
+	function getId()
+	{
 		return $this->id;
 	}
 
-	function setId($id){
+	function setId($id)
+	{
 		$this->id = $id;
 	}
 
-	function getName(){
+	function getName()
+	{
 		return $this->name;
 	}
 
-	function setName($name){
+	function setName($name)
+	{
 		$this->name = $name;
 	}
 
-	function getSurname(){
+	function getSurname()
+	{
 		return $this->surname;
 	}
 
-	function setSurname($surname){
+	function setSurname($surname)
+	{
 		$this->surname = $surname;
 	}
 
-	function getMail(){
+	function getMail()
+	{
 		return $this->mail;
 	}
 
-	function setMail($mail){
+	function setMail($mail)
+	{
 		$this->mail = $mail;
 	}
 
-	function getPassword(){
+	function getPassword()
+	{
 		return $this->password;
 	}
 
-	function setPassword($password){
+	function setPassword($password)
+	{
 		$this->password = $password;
 	}
 
-	function getClass(){
+	function getClass()
+	{
 		return $this->class;
 	}
 
-	function setClass($class){
+	function setClass($class)
+	{
 		$this->class = $class;
 	}
 
-	function isDeleted(){
+	function isDeleted()
+	{
 		return $this->deleted;
 	}
 
-	function setDelete(){
+	function setDelete()
+	{
 		$this->delete = true;
 	}
 }

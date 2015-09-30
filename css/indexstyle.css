@@ -130,10 +130,6 @@ input, select {
 	text-align: center;
 }
 
-select {
-	margin-top: 12px;
-}
-
 input[type=submit]  {
 	margin-top: 12px;
 	background-color: #1ABC9C;
@@ -174,4 +170,7 @@ input[type=submit]:hover {
     color: white;
 }
 
+#alreadyClass {
+	margin: 10px 0px 0px 0px;
+}
 

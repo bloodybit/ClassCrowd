@@ -78,7 +78,10 @@
 
 
 
-<div class="wrapper animatedBackground">
+<div class="wrapper">
+	<div class="anim-wrap">
+		<div class="animated-background"></div>
+	</div>
 	<div id="index-info">
 		
 		<h1>ClassCrowd</h1>

@@ -19,12 +19,63 @@ body {
     width: calc(100% - 300px);
     text-align: center; 
     color: white;
-	background: url(../images/splash.jpg) no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
+
+
+@keyframes animatedBackground {
+	0% { -moz-transform: scale(1.25,1.25); -webkit-transform: scale(1.25,1.25); transform: scale(1.25,1.25); }
+	100% { -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); }
+}
+@-moz-keyframes animatedBackground {
+	0% { -moz-transform: scale(1.25,1.25); -webkit-transform: scale(1.25,1.25); transform: scale(1.25,1.25); }
+	100% { -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); }
+}
+@-webkit-keyframes animatedBackground {
+	0% { -moz-transform: scale(1.25,1.25); -webkit-transform: scale(1.25,1.25); transform: scale(1.25,1.25); }
+	100% { -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); }
+}
+@-ms-keyframes animatedBackground {
+	0% { -moz-transform: scale(1.25,1.25); -webkit-transform: scale(1.25,1.25); transform: scale(1.25,1.25); }
+	100% { -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); }
+}
+@-o-keyframes animatedBackground {
+	0% { -moz-transform: scale(1.25,1.25); -webkit-transform: scale(1.25,1.25); transform: scale(1.25,1.25); }
+	100% { -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); }
+}
+
+
+
+
+.anim-wrap {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.anim-wrap > .animated-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    background-image: url(../images/splash.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+	animation: animatedBackground 20s ease-out;
+	-moz-animation: animatedBackground 20s ease-out;
+	-webkit-animation: animatedBackground 20s ease-out;
+	-ms-animation: animatedBackground 20s ease-out;
+	-o-animation: animatedBackground 20s ease-out;
+}
+
+
 
 
 #aside-overflow {

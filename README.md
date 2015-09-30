@@ -1,4 +1,13 @@
 # ClassCrowd
 EAL Hackaton
 
-NinjaMock project: https://www.ninjamock.com/s/G5XNT
+Group 2:
+* Alberto
+* Anders P
+* Riccardo
+* Viesturs
+
+
+------------
+
+NinjaMock project: https://www.ninjamock.com/s/G5XNT (OBSOLETE!)

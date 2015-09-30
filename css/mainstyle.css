@@ -42,7 +42,6 @@ aside {
     left: 0px;
 	background-color: #34495E;
 	color: white;
-	text-align: center;
 }
 
 footer {
@@ -57,6 +56,54 @@ footer {
 #byline {
 	font-size: 10pt;
 }
+
+
+
+
+.avatar-wrap {
+	margin-top: 24px;
+	margin-left: -12px;
+	width: 288px;;
+	height: 84px;
+	padding-left: 12px;
+	border-bottom: 1px solid #95A5A6;
+}
+#avatar-pic {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+#avatar-txt {
+	display: block;
+	position: absolute;
+	font-size: 12pt;
+	line-height: 20px;
+	margin-top: -12px;
+	left: 84px;
+    width: -moz-calc(100% - 96px);
+    width: -webkit-calc(100% - 96px);
+    width: calc(100% - 96px);
+}
+
+.cut-text {
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.sidebar-wrap {
+	margin-top: 96px;
+}
+
+
+
+
+
+
 
 .login-wrap {
 	margin-top: 48px;

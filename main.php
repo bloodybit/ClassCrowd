@@ -27,10 +27,26 @@ session_start();
 
 <aside>
 
-<div id="sidebar">
-    <?php loadSidebar($_GET['sidebar'], 'class'); ?>
-</div>
+<section class="avatar-wrap">
+	<img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
+	<div id="avatar-txt">
+		<p class="cut-text"><b>Name of student goes here</b></p>
+		<p class="cut-text">Class: Class goes here</p>
+	</div>
+</section>
 
+
+<section class="sidebar-wrap">
+	<div id="sidebar">
+	    <?php loadSidebar($_GET['sidebar'], 'class'); ?>
+	</div>
+</section>
+
+
+	<footer>
+		<p>ClassCrowd</p>
+		<p id="byline">Made with love by<br>Alberto, Anders, Riccardo, Viesturs</p>
+	</footer>
 
 </aside>
 

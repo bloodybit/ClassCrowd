@@ -65,9 +65,24 @@
 			<input type="password" id="repassword" class="input-field" placeholder="Repeat Password" />
 			<div id="repassFeedback" class="error-message"></div>
 
+			<input type="text" id="newClass" class="input-field" placeholder="Add a new class">
+			<?php
+
+			?>
+			<div id="newClassFeedback" class="error-message"></div>
+
+			<p id="alreadyClass">class already exists?</p>
 			<select id="studentClass">
-				<option value="Default">Please select your class:</option>
-                <option value="WebDev1st">Web Development, 1st sem.</option>
+				<?php
+				/*
+				echo '<option value="Default">Please select your class</option>';
+				$classes = Classe::getClasses(10);
+				foreach ($classes as $class) {
+					echo ('<option value="' . $class->getId() . '">' . $class->getClass() . '</option>');
+				}
+				*/
+				?>
+
 			</select>
 			<div id="classFeedback" class="error-message"></div>
 

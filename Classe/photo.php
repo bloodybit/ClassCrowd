@@ -12,7 +12,7 @@ class Photo{
     public $bullet_id;
     public $user_id;
     public $date;
-    public $deleted;
+    public $deleted =false;
 
     function __construct($input = false){
         if (is_array($input)) {
@@ -52,6 +52,56 @@ class Photo{
         $this->bullet_id = $bullet_id;
     }
 
-    function
+    function getUserId(){
+        return $this->user_id;
+    }
+
+    function setUserId($user_id){
+        $this->user_id = $user_id;
+    }
+
+    function getDate(){
+        return $this->date;
+    }
+
+    function isDeleted(){
+        return $this->deleted;
+    }
+
+    function setDelete(){
+        $this->deleted = true;
+    }
+
+    static function getPhotosByBullet($bullet_id){
+        //clear all the results
+        $photos = array();
+
+        $connection = Database::getConnection();
+
+        $query = "SELECT * FROM photo WHERE deleted=false AND bullet_id=".$bullet_id." ORDER BY date ASC";
+
+        //print the test query
+        //echo $query;
+
+        //run the query
+        $result_obj = $connection->query($query);
+
+        try{
+            //I COULD USE A FOR AND IT WOULD BE BETTER
+            //BUT IT DOESN'T WORK AND I HAVE NO TIME TO
+            //FIND THE PROBLEM :)
+            $i=0;
+
+            while($result=$result_obj->fetch_array(MYSQLI_ASSOC)){
+                $photos[$i] = new Photo($result);
+                $i++;
+            }
+
+            //Pass back the result
+            return $photos;
+        } catch(Exception $e){
+            $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
+        }
+    }
 
 }

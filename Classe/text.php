@@ -87,10 +87,10 @@ class Text
 
         $connection = Database::getConnection();
 
-        $query = "SELECT * FROM text WHERE deleted=false AND bulled_id=".$bullet_id." ORDER BY date ASC";
+        $query = "SELECT * FROM text WHERE deleted=false AND bullet_id=".$bullet_id." ORDER BY date ASC";
 
         //print the test query
-        echo $query;
+        //echo $query;
 
         //run the query
         $result_obj = $connection->query($query);
@@ -102,7 +102,7 @@ class Text
             $i=0;
 
             while($result=$result_obj->fetch_array(MYSQLI_ASSOC)){
-                $texts[$i] = new Bullet($result);
+                $texts[$i] = new Text($result);
                 $i++;
             }
 

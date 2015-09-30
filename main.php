@@ -5,6 +5,12 @@ require_once 'Classe/classe.php';
 require_once 'Classe/subject.php';
 require_once 'Classe/lesson.php';
 require_once 'Classe/bullet.php';
+require_once 'Classe/code.php';
+require_once 'Classe/note.php';
+require_once 'Classe/photo.php';
+require_once 'Classe/text.php';
+require_once 'Classe/user.php';
+
 
 
 session_start();

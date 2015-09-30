@@ -17,10 +17,12 @@ if ($_POST['firstname']!=null && $_POST['lastname']!=null && $_POST['mail']!=nul
     $lname = $_POST['lastname'];
     $mail = $_POST['mail'];
     $pass = $_POST['password'];
-    $class = $_POST[];
+    $class = $_POST['newClass'];
 
     $connection = Database::getConnection();
 
     $query = 'INSERT INTO user (name, surname, mail, password, class_id, deleted)
-          VALUES ($fname, $lname, $mail, $pass, )';
+              VALUES ($fname, $lname, $mail, $pass, $class, false)';
+
+    $connection->query($query);
 }

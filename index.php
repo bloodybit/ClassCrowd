@@ -25,8 +25,6 @@
 		</div>
 	</div>
 	-->
-
-
 	<section class="login-wrap">	
 		<h2>Login</h2>
 		<form class="login-card" action="Functions/LoginFunction.php" method="post">
@@ -74,13 +72,13 @@
 			<p id="alreadyClass">class already exists?</p>
 			<select id="studentClass">
 				<?php
-				/*
+
 				echo '<option value="Default">Please select your class</option>';
 				$classes = Classe::getClasses(10);
 				foreach ($classes as $class) {
 					echo ('<option value="' . $class->getId() . '">' . $class->getClass() . '</option>');
 				}
-				*/
+
 				?>
 
 			</select>

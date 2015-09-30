@@ -24,12 +24,14 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 <h1>Document</h1>
 
 <h5>Bullets</h5>
+
+<?php echo '<a href="main.php?sidebar=lessons&subject_id='. $_GET['subject_id'].'&content=add&lesson_id='.$_GET['lesson_id'].'"<h2>ADD</h2></a>'; ?>
+
 <ul>
 <?php
     foreach($bullets as $bullet){
         echo '<li>'.$bullet->getBullet().'</li>';
 
-            echo "ee";
             //2) get Text in each bullets
             $texts = Text::getTextByBullet($bullet->getId());
 
@@ -42,7 +44,6 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
             // Now i Will make an associative array with date, type of object and object
             $notes = array();
 
-        echo 4;
             //2) start whit text
             if(count($texts)>0) {
                 foreach ($texts as $text) {

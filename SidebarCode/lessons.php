@@ -20,4 +20,5 @@ foreach($lessonsList as $lesson){
     echo '<br><a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'">'. $lessonDate." - ".$lesson->getTitle()."</a>";
 }
 ?>
-<a href="main.php?sidebar=class">Class</a> > <a href="main.php?sidebar=subject">Subjects</a>
+<br><br><br>
+<a href="main.php?sidebar=class">Back to class</a>

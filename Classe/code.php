@@ -72,7 +72,7 @@ class Code {
         $query = "SELECT * FROM code WHERE deleted=false AND bullet_id=".$bullet_id." ORDER BY date ASC";
 
         //print the query
-        echo $query;
+        //echo $query;
 
         //run the query
         $result_obj = $connection->query($query);

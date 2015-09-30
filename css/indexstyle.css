@@ -8,27 +8,6 @@ body {
     font-family: 'Lato', Arial, sans-serif;
     background-color: white;
 }
-
-@keyframes animatedBackground {
-	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
-	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
-}
-@-moz-keyframes animatedBackground {
-	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
-	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
-}
-@-webkit-keyframes animatedBackground {
-	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
-	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
-}
-@-ms-keyframes animatedBackground {
-	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
-	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
-}
-@-o-keyframes animatedBackground {
-	0% { -webkit-background-size: 125%; -moz-background-size: 125%; -o-background-size: 125%; background-size: 125%; }
-	100% { -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
-}
  
 .wrapper {
 	position: absolute;
@@ -41,15 +20,10 @@ body {
     text-align: center; 
     color: white;
 	background: url(../images/splash.jpg) no-repeat center center; 
-	-webkit-background-size: 100%;
-	-moz-background-size: 100%;
-	-o-background-size: 100%;
-	background-size: 100%;
-	animation: animatedBackground 10s ease-out;
-	-moz-animation: animatedBackground 10s ease-out;
-	-webkit-animation: animatedBackground 10s ease-out;
-	-ms-animation: animatedBackground 10s ease-out;
-	-o-animation: animatedBackground 10s ease-out;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 

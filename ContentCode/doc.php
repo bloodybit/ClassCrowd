@@ -6,6 +6,7 @@
  *      lesson_id
  */
 
+//function to order by date
 function cmp($a, $b)
 {
     if ($a->getDate() == $b->getDate()) {
@@ -32,46 +33,32 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
             //2) get Text in each bullets
             $texts = Text::getTextByBullet($bullet->getId());
 
-        echo"<br><br>";
-        print_r($texts);
-        echo"<br><br>";
-
             //3) get Code in each bullets
             $codes = Code::getCodeBybullet($bullet->getId());
-
-        echo"<br><br>";
-        print_r($codes);
-        echo"<br><br>";
 
             //4) get Photos in each bullets
             $photos = Photo::getPhotosByBullet($bullet->getId());
 
-        echo"<br><br>";
-        echo("<h1>PHOTO</h1>");
-        print_r($photos);
-        echo"<br><br>";
-        echo"Ciaisomo";
-
             // Now i Will make an associative array with date, type of object and object
             $notes = array();
 
+        echo 4;
             //2) start whit text
-            foreach($texts as $text){
-                echo "<br> date: ". $text->getDate() . "   Text ". $text->getText();
-                $note = new Note($text->getDate(), 'text', $text);
-                array_push($notes, $note);
+            if(count($texts)>0) {
+                foreach ($texts as $text) {
+                    $note = new Note($text->getDate(), 'text', $text);
+                    array_push($notes, $note);
+                }
             }
 
-            echo "2";
             //3) then with code
-            if(count($photos)>0) {
+            if(count($codes)>0) {
                 foreach ($codes as $code) {
                     $note = new Note($code->getDate(), 'code', $code);
                     array_push($notes, $note);
                 }
             }
 
-            echo "!!! ! ! ! !  ! ";
             //4) and photos
             if(count($photos)>0){
                 foreach($photos as $photo){
@@ -80,21 +67,27 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
                 }
             }
 
-            echo "3<br>";
-            print_r($notes);
-            //function to order by date
 
-            echo "blloca?";
+            //Sort using function
             if(count($notes)>1){
                 usort($notes, "cmp");
             }
 
+            //Now I print the object dynamically and ordered
             foreach($notes as $note){
-                echo"<br><br>";
-                echo $note->getDate() . " - " . $note->getKind();
-                echo"<br><br>";
+                if($note->getKind() == 'text'){
+                    $text = $note->getObject();
+                    echo "<p>".$text->getText()."</p>";
+                }
+                if($note->getKind() == "code"){
+                    $code = $note->getObject();
+                    echo "<p>".$code->getCode()."</p>";
+                }
+                if($note->getKind() == "photo"){
+                    $photo = $note->getObject();
+                    echo '<img src="'.$photo->getPath().'">"';
+                }
             }
-
     }
 ?>
 </ul>

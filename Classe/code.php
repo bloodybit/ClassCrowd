@@ -9,7 +9,7 @@
 class Code {
     public $id;
     public $lecture_id;
-    public $path;
+    public $code;
     public $bullet_id;
     public $user_id;
     public $date;
@@ -35,12 +35,12 @@ class Code {
         $this->lecture_id = $lecture_id;
     }
 
-    function getPath(){
-        return $this->path;
+    function getCode(){
+        return $this->code;
     }
 
-    function setPath($path){
-        $this->path = $path;
+    function setCode($code){
+        $this->code = $code;
     }
 
     function getUserId(){
@@ -84,7 +84,7 @@ class Code {
             $i=0;
 
             while($result=$result_obj->fetch_array(MYSQLI_ASSOC)){
-                $codes[$i] = new Bullet($result);
+                $codes[$i] = new Code($result);
                 $i++;
             }
 

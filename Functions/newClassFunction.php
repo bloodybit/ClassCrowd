@@ -15,7 +15,7 @@ $className = $_POST['className'];
 $connection = Database::getConnection();
 
 $query = 'INSERT INTO class (class, user_id, deleted)
-                  VALUES ($className, 1, false)';
+          VALUES ($className, 1, false)';
 
 //Run the query
 $connection->query($query);;

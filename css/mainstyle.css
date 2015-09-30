@@ -60,6 +60,7 @@ a:visited {
     width: -webkit-calc(100% - 300px);
     width: calc(100% - 300px);
     color: #34495E;
+    padding-left: 12px;
 }
 
 

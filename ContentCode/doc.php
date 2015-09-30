@@ -20,9 +20,9 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
     foreach($bullets as $bullet){
         echo '<li>'.$bullet->getBullet().'</li>';
 
-
-        //2) get Text in each bullets
-        $texts = Text::getTextByBullet($bullet->getId());
+//
+//        //2) get Text in each bullets
+//        $texts = Text::getTextByBullet($bullet->getId());
 
     }
 ?>

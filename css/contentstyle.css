@@ -1,26 +1,26 @@
 .lesson_box{
     position: relative;
-      font-family: 'Questrial', sans-serif;
+    font-family: 'Lato', sans-serif;
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 	color: white;
-width: 200px;
-height: 200px;
-background-color:#04AAC0;
-margin:0px;
-float:left;
-margin-right:10px;
-margin-top:10px;
+	width: 200px;
+	height: 200px;
+	background-color:#3498DB;
+	margin:0px;
+	float:left;
+	margin-right:10px;
+	margin-top:10px;
 }
 
 .lesson_box:hover{
-	transition: 0.1s;
- 	border-bottom:5px solid #045673;
+	transition: 0.5s;
+ 	border-bottom:5px solid #34495E;
 }
 
 .lesson_box:hover .lesson_subject {
- 	transition: 0.1s;
+ 	transition: 0.5s;
  	opacity: 1;
 }
 
@@ -50,11 +50,11 @@ margin-top:10px;
 }
 
 .lesson_subject{
-	background: #045673;
+	background: #34495E;
 	opacity: .5;
 	padding:5px;
 	position: absolute;
-	top:2px;
+	top:0px;
 	margin:0px;
 }
 

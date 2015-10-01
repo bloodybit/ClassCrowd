@@ -22,7 +22,7 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
 
 <h1>Add Content</h1>
 
-<form action="Functions/AddContent.php" method="post"  enctype="multipart/form-data">
+<form enctype="multipart/form-data" action="Functions/AddContent.php" method="post">
     <h2>Add to Bullet</h2>
     <?php
         foreach($bullets as $bullet){
@@ -39,9 +39,12 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
 
     <h3>Add Img</h3>
     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-    Send this Image: <input name="userfile" type="file" />
+    Send this Image: <input name="photo" type="file" />
     <input type="submit" value="AddContent">
 
-    <p><?php echo 'ERROR: '.$_SESSION['message']; ?></p>
+    <p><?php if(!empty($_SESSION['message'])){
+            echo 'ERROR: '.$_SESSION['message'];
+            unset($_SESSION['message']);
+        } ?></p>
 </form>
 

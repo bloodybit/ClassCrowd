@@ -22,7 +22,7 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
 
 <h1>Add Content</h1>
 
-<form action="Functions/AddContent.php" method="post">
+<form action="Functions/AddContent.php" method="post"  enctype="multipart/form-data">
     <h2>Add to Bullet</h2>
     <?php
         foreach($bullets as $bullet){

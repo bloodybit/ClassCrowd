@@ -19,8 +19,11 @@ if(!empty($_POST['newLesson'])){
 
     $result = $connection->query($query);
 
+   
+
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }else{
     $_GET['message'] = "No name inserted!";
+
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }

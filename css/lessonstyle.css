@@ -9,6 +9,7 @@
     width: -webkit-calc(100% - 300px);
     width: calc(100% - 300px);
 	color: white;
+	z-index: 50;
 }
 
 .lesson-header > h2 {
@@ -45,5 +46,44 @@
 
 input[type=radio] {
 	width: 24px;
+}
+
+
+
+.add-1 {
+	position: absolute;
+	top: 58px;
+	left: 0px;
+	width: 500px;
+	padding-left: 24px;
+}
+
+
+.add-2 {
+	position: absolute;
+	top: 58px;
+	right: 0px;
+	width: 500px;
+	padding-left: 24px;
+}
+
+.add-3 {
+	position: fixed;
+	background-color: #2C3E50;
+	bottom: 0px;
+	left: 300px;
+	height: 116px;
+	height: 58px;
+    width: -moz-calc(100% - 300px);
+    width: -webkit-calc(100% - 300px);
+    width: calc(100% - 300px);
+	color: white;
+	z-index: 50;
+}
+
+.add-3 > input {
+	position: absolute;
+	margin-left: -100px;
+	left: 50%;
 }
 

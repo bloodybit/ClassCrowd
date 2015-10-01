@@ -123,3 +123,7 @@
 .sidebar-link:not:first-child{
 	background-color: red !important;
 }
+
+#subject-title{
+	font-size:17px;
+}

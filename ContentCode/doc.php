@@ -86,7 +86,7 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
                 }
                 if($note->getKind() == "photo"){
                     $photo = $note->getObject();
-                    echo '<img src="'.$photo->getPath().'">"';
+                    echo '<img src="'.$photo->getPath().'" height=400>';
                 }
             }
     }

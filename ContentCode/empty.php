@@ -10,8 +10,6 @@
 
 <p>In order to start, you have to choose a class in the left sidebar!</p>
 
-
-
 	<ul id="empty-list">
 		<img id="arrow-left" src="images/arrow-left.png">
 		<li><span>On ClassCrowd you are able to view any <span class="special-char">class</span> you wish</span></li>

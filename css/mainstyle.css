@@ -108,9 +108,9 @@ footer {
 	margin-top: 24px;
 	margin-left: -12px;
 	width: 288px;;
-	height: 84px;
+	height: 90px;
 	padding-left: 12px;
-	border-bottom: 2px solid #2C3E50;
+	border-bottom: 3px solid #2C3E50;
 }
 #avatar-pic {
 	position: absolute;
@@ -126,7 +126,7 @@ footer {
 	font-size: 12pt;
 	line-height: 20px;
 	margin-top: 0px;
-	left: 84px;
+	left: 90px;
     width: -moz-calc(100% - 96px);
     width: -webkit-calc(100% - 96px);
     width: calc(100% - 96px);
@@ -148,7 +148,15 @@ footer {
 }
 
 
+.sidebar-link {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-top: 1px solid #7F8C8D;
+}
 
+.sidebar-link > a {
+	width: 100%;
+}
 
 
 
@@ -207,6 +215,18 @@ input[type=submit]:focus {
     background-color: #16A085;
     color: white;
 }
+
+input[type=text] {
+	border: 2px solid #BDC3C7;
+}
+
+
+input[type=text]:focus {
+    outline: none;
+	border: 2px solid #1ABC9C;
+}
+
+
 
 input[type=submit]:hover {
 	outline: none;

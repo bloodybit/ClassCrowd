@@ -139,6 +139,7 @@ footer {
 
 .login-wrap {
 	margin-top: 0px;
+	
 }
 
 .register-wrap {
@@ -151,7 +152,7 @@ input, select {
 	border-radius: 6px;
 	border: none;
 	padding: 8px 12px;
-	width: 212px;
+	width: 224px;
 	text-align: center;
 }
 
@@ -167,7 +168,7 @@ input[type=submit]  {
 }
 
 .input-field {
-	width: 212px;
+	width: 196px;
 	margin-top: 12px;
     color: #34495E;
     border-radius: 6px;
@@ -183,7 +184,6 @@ input[type=submit]  {
 
 .input-field:focus {
     outline: none;
-    background-color: #BDC3C7;
     color: #2C3E50;
 }
 
@@ -193,10 +193,21 @@ input[type=submit]:focus {
     color: white;
 }
 
+input[type=text], input[type=password], textarea {
+	border: 2px solid #BDC3C7;
+}
+
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    outline: none;
+	border: 2px solid #1ABC9C;
+}
+
+
+
 input[type=submit]:hover {
 	outline: none;
     background-color: #16A085;
     color: white;
 }
-
 

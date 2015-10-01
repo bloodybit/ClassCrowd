@@ -7,7 +7,7 @@
 	color: white;
 	width: 200px;
 	height: 200px;
-	background-color:#3498DB;
+	background-color:#1ABC9C;
 	margin:0px;
 	float:left;
 	margin-right:10px;
@@ -65,7 +65,7 @@
 }
 
 .lesson_container{
-	width: 840px;
+	width: 100%;
   	margin:0px auto;
   	margin-bottom: 30px;
 }

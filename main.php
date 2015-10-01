@@ -11,7 +11,7 @@ require_once 'Classe/photo.php';
 require_once 'Classe/text.php';
 require_once 'Classe/user.php';
 
-session_start();
+//session_start();
 ?>
 
 
@@ -28,7 +28,7 @@ session_start();
 
 <?php 
 
-session_start();
+//session_start();
 
 if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
 	$_SESSION['message'] = "Your not allow to see this section";

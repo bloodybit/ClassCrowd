@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
+<body>
+
+<div class="error-go-away">
 <?php
     session_start();
 
@@ -15,8 +18,8 @@
         header("Location:main.php?sidebar=class");
     }
 ?>
+</div>
 
-<body>
 
 <aside>
 	<div id="aside-overflow">

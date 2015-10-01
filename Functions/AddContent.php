@@ -85,7 +85,14 @@ if(!empty($_POST['code'])){
     $result = $connection->query($query);
 }
 
-if(!empty)
+if(!file_exists($_FILES['photo'])){
+    $uploaddir = 'img/';
+
+    $extension = end(explode('.', $_FILES['photo']['name']));
+    echo "ww";
+    $uploadfile = $uploaddir . basename($_FILES['photo']['tmp_name']. ".". $extension);
+    echo $uploadfile;
+}
 
 $_SESSION['message'] = "DONE!";
 header('Location: ../main.php');

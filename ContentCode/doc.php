@@ -21,6 +21,10 @@ function cmp($a, $b)
 $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 ?>
 
+<div class="lesson-header">
+asdf
+</div>
+
 <h1>Document</h1>
 
 <h5>Bullets</h5>

@@ -79,7 +79,6 @@ session_start();
 
 <div class="wrapper">
 
-    <h1>Content</h1>
     <div id="content">
         <?php loadContent($_GET['content'], 'empty'); ?>
     </div>

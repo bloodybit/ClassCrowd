@@ -40,7 +40,7 @@ if($_POST['mail']!=null && $_POST['pass']!=null){
         setcookie("class_id", $item->class_id, time()+ 3600 * 24 * 30, '/');
         $_SESSION['id'] = $item->id;
 
-        header('Location:../main.php');
+        header('Location:../main.php?sidebar=class');
         exit();
 
     }

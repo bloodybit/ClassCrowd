@@ -2,7 +2,7 @@
     session_start();
 
     if($_COOKIE['id']==$_SESSION['id'] && isset($_COOKIE['id'])){
-        header("Location:main.php");
+        header("Location:main.php?sidebar=class");
     }
 ?>
 

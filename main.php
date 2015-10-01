@@ -84,6 +84,10 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
 
 
 <div class="wrapper">
+    <div><?php if(!empty($_SESSION['message'])){
+            echo 'ERROR: '.$_SESSION['message'];
+            unset($_SESSION['message']);
+        } ?></div>
 
     <div id="content">
         <?php loadContent($_GET['content'], 'empty'); ?>

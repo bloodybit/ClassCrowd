@@ -25,8 +25,11 @@ $_SESSION['class_id'] = $_GET['class_id'];
 
 ?>
 <a href="add-new-lesson"><div class="lesson_box"> 
-<i class="fa fa-plus"></i><form action="Functions/AddLesson.php"
-</div></a>
+<i class="fa fa-plus"></i>
+</div></a><form action="Functions/AddLesson.php" method="post">
+        New Lesson's name: <input type="text" name="newLesson">
+        <input type="submit" value="Add Lesson">
+    </form>
 
 <?php
 

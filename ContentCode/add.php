@@ -29,18 +29,19 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
 <div class="add-note">
 asdsdf
 </div>
-<input type="submit" value="Add Content">
+<br><br><br>
+
 
 <br><br><br>
 
 <form enctype="multipart/form-data" action="Functions/AddContent.php" method="post">
-    <h2>Add to Bullet</h2>
+    <h2>Add notes to lesson highlight</h2>
     <?php
         foreach($bullets as $bullet){
             echo '<input type="radio" name="bullet" value="'.$bullet->getId().'">'.$bullet->getBullet().'<br>';
         }
     ?>
-    <input type="radio" name="bullet" value="jolly">Add new bullet: <input type="text" name="newBullet"> <br>
+    <input type="radio" name="bullet" value="jolly">Add new Lesson Hightlight: <input type="text" name="newBullet"> <br>
 
     <h3>Add Text</h3>
     <textarea name="text" rows="10" cols="40"></textarea>
@@ -52,7 +53,7 @@ asdsdf
     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
     Send this Image: <input name="photo" type="file" />
     <br><br>
-    
+    <input type="submit" value="Add Content">
 
     <p><?php if(!empty($_SESSION['message'])){
             echo 'ERROR: '.$_SESSION['message'];

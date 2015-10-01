@@ -15,8 +15,9 @@ if(!empty($_POST['newLesson'])){
     $connection = Database::getConnection();
 
     $query = "INSERT INTO lesson (title, subject_id, user_id) VALUES ('" . $_POST['newLesson'] .
-        "', " . $_SESSION['subject_id'] . ", " . $_COOKIE['id'] . ")";
+        "', " . $_POST['subject_id'] . ", " . $_COOKIE['id'] . ")";
 
+    //echo $query;
     $result = $connection->query($query);
 
     header('Location: ' . $_SERVER['HTTP_REFERER']);

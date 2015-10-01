@@ -27,6 +27,7 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
 	<h2 class="cut-text">Adding notes to Lesson</h2>
 </div>
 
+<<<<<<< HEAD
 
 <div class="bg1"></div>
 
@@ -66,6 +67,36 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
     <div class="add-3">
 	    <input type="submit" value="Add Content">
 	</div>
+=======
+<div class="add-note">
+asdsdf
+</div>
+<br><br><br>
+
+
+<br><br><br>
+
+<form enctype="multipart/form-data" action="Functions/AddContent.php" method="post">
+    <h2>Add notes to lesson highlight</h2>
+    <?php
+        foreach($bullets as $bullet){
+            echo '<input type="radio" name="bullet" value="'.$bullet->getId().'">'.$bullet->getBullet().'<br>';
+        }
+    ?>
+    <input type="radio" name="bullet" value="jolly">Add new Lesson Hightlight: <input type="text" name="newBullet"> <br>
+
+    <h3>Add Text</h3>
+    <textarea name="text" rows="10" cols="40"></textarea>
+
+    <h3>Add Code</h3>
+    <textarea name="code" rows="10" cols="40"></textarea>
+
+    <h3>Add Img</h3>
+    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+    Send this Image: <input name="photo" type="file" />
+    <br><br>
+    <input type="submit" value="Add Content">
+>>>>>>> 13dc21a33d6f06d94a8028ae8e9d3773452b847e
 
     <p><?php if(!empty($_SESSION['message'])){
             echo 'ERROR: '.$_SESSION['message'];

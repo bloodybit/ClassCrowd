@@ -8,4 +8,7 @@
     }
 //main.php?sidebar=subject&subject_id='.$sub->getId().'&content=lessons
 ?>
-<a href="main.php?sidebar=lessons">Lessons</a>
+
+<!--  <a href="main.php?sidebar=lessons">Lessons</a> -->
+<br><br>
+<a href="main.php?sidebar=class"><i class="fa fa-arrow-circle-o-left"></i> Back to Classes</a>

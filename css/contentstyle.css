@@ -7,7 +7,7 @@
 	color: white;
 	width: 200px;
 	height: 200px;
-	background-color:#3498DB;
+	background-color:#0C8284;
 	margin:0px;
 	float:left;
 	margin-right:10px;
@@ -65,8 +65,7 @@
 }
 
 .lesson_container{
-	width: 840px;
-  	margin:0px auto;
+	width: 100%;
   	margin-bottom: 30px;
 }
 
@@ -78,7 +77,7 @@
 
 
 #arrow-left{
-	    position: absolute;
+	position: absolute;
     -ms-transform: rotate(39deg);
     -webkit-transform: rotate(39deg);
     transform: rotate(39deg);
@@ -86,6 +85,7 @@
     width: 160px;
     left: -176px;
     z-index: 100;
+    pointer-events: none;
 
 }
 

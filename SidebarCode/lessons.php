@@ -2,9 +2,15 @@
 /**
  *
  */
-if(isset($_GET['subject_id'])){
+if(isset($_SESSION['subject_id'])){
     //Subject name
-    $subjectName = Subject::getSubjectById($_GET['subject_id']);
+    $subjectName = Subject::getSubjectById($_SESSION['subject_id']);
+}else{
+	if(isset($_GET['subject_id'])){
+		$subjectName = Subject::getSubjectById($_GET['subject_id']);
+	} else{
+		$subjectName = "Subject";
+	}
 }
 ?>
 

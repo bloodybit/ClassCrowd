@@ -15,9 +15,10 @@
  *      lesson_id
  */
 
+session_start();
 $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 $_SESSION['lesson_id'] = $_GET['lesson_id'];
-$_SESSION['lesson_id'] = $_GET['lesson_id'];
+$_SESSION['subject_id'] = $_GET['subject_id'];
 
 ?>
 

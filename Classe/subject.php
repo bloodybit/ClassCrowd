@@ -109,6 +109,7 @@ class Subject
 
         $query = 'SELECT subject FROM subject WHERE id='.$subject_id;
 
+        //echo  $query;
         //Run the query
         $result_obj = $connection->query($query);
 

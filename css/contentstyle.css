@@ -16,12 +16,12 @@
 
 
 .lesson_box:hover{
-	transition: 0.5s;
- 	border-bottom:5px solid #34495E;
+	transition: 0.2s;
+ 	border-bottom:5px solid rgb(44, 62, 80);
 }
 
 .lesson_box:hover .lesson_subject {
- 	transition: 0.5s;
+ 	transition: 0.2s;
  	opacity: 1;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .lesson_subject{
-	background: #34495E;
+	background: rgb(44, 62, 80);
 	opacity: .5;
 	padding:5px;
 	position: absolute;
@@ -67,4 +67,5 @@
 .lesson_container{
 	width: 840px;
   	margin:0px auto;
+  	margin-bottom: 30px;
 }

@@ -4,7 +4,13 @@ require_once 'Functions/DbFunction.php';
 require_once 'Classe/classe.php';
 require_once 'Classe/subject.php';
 require_once 'Classe/lesson.php';
+require_once 'Classe/bullet.php';
+require_once 'Classe/code.php';
+require_once 'Classe/note.php';
+require_once 'Classe/photo.php';
+require_once 'Classe/text.php';
 require_once 'Classe/user.php';
+
 
 
 session_start();
@@ -30,44 +36,41 @@ session_start();
 
 
 <aside>
-	<section class="avatar-wrap">
-		<img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
-		<div id="avatar-txt">
-			<p class="cut-text"><b> 
+    <section class="avatar-wrap">
+        <img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
+        <div id="avatar-txt">
+            <p class="cut-text"><b>
 
-					<?php  //user NAME and SURNAME
-		 				$user = User::getUserById($_COOKIE['id']);
-		 				echo $user->name . " " . $user->surname;
+                    <?php  //user NAME and SURNAME
+                    $user = User::getUserById($_COOKIE['id']);
+                    echo $user->name . " " . $user->surname;
 
-					?>
-			</b></p>
-			<p class="cut-text">Class: 
+                    ?>
+                </b></p>
+            <p class="cut-text">Class:
+                <?php
+                // $className = Classe::getNameByUserId($_COOKIE['class_id']);
+                // echo $className;
+                ?>
 
-					<?php 
-						$className = Classe::getNameByUserId($_COOKIE['class_id']);
-						echo $className;
+            </p>
 
+            <p class="logout"><a href="Functions/LogoutFunction.php"><i class="fa fa-sign-out"></i> Log out</a></p>
+        </div>
+    </section>
 
-					?>
+    <div id="aside-overflow">
+        <section class="sidebar-wrap">
+            <div id="sidebar">
+                <?php loadSidebar($_GET['sidebar'], 'class'); ?>
+            </div>
+        </section>
+    </div>
 
-			</p>
-					
-			<p class="logout"><a href="Functions/LogoutFunction.php"><i class="fa fa-sign-out"></i> Log out</a></p>
-		</div>
-	</section>
-
-	<div id="aside-overflow">
-		<section class="sidebar-wrap">
-			<div id="sidebar">
-		    	<?php loadSidebar($_GET['sidebar'], 'class'); ?>
-			</div>
-		</section>	
-	</div>
-
-	<footer>
-		<p>ClassCrowd</p>
-		<p id="byline">Made with <i class="fa fa-heart"></i> by<br>Alberto, Anders, Riccardo, Viesturs</p>
-	</footer>
+    <footer>
+        <p>ClassCrowd</p>
+        <p id="byline">Made with <i class="fa fa-heart"></i> by<br>Alberto, Anders, Riccardo, Viesturs</p>
+    </footer>
 
 </aside>
 
@@ -76,21 +79,12 @@ session_start();
 
 <div class="wrapper">
 
-<h1>Content</h1>
-<div id="content">
-    <?php loadContent($_GET['content'], 'empty'); ?>
-</div>
-
-
+    <h1>Content</h1>
+    <div id="content">
+        <?php loadContent($_GET['content'], 'empty'); ?>
+    </div>
 
 </div>
-
-
-
-
-
-
-
 </body>
 </html>
 

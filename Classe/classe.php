@@ -76,7 +76,7 @@ class Classe{
         }
     }
 
-   
+
 
     public static function getNameByUserId($class_id){
         //clear the result

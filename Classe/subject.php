@@ -103,11 +103,11 @@ class Subject
 
     static function getSubjectById($subject_id){
         //clear the result
-        $subject = new Subject();
+        $subject = '';
 
         $connection = Database::getConnection();
 
-        $query = 'SELECT id, subject FROM subject WHERE id='.$subject_id;
+        $query = 'SELECT subject FROM subject WHERE id='.$subject_id;
 
         //Run the query
         $result_obj = $connection->query($query);
@@ -126,7 +126,7 @@ class Subject
             }
 
             //pass back the result
-            return $subject;
+            return $subject->getSubject();
         } catch(Exception $e){
             $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
         }

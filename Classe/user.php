@@ -102,7 +102,6 @@ class User{
 	}
 
 
-
 	static function getUserById($id){
 		//clear the result
 		$class = new Classe();

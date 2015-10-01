@@ -15,7 +15,7 @@ if(isset($_GET['subject_id'])){
 ?>
 
 <div class="lesson_container">
-<h2><?php echo($subjectName); ?>'s Lessons</h2>
+<h1><?php echo($subjectName); ?>'s Lessons</h1>
 <?php
     $lessonsList = Lesson::getLessonsBySubjectId($_GET['subject_id']);
 

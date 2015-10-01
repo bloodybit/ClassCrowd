@@ -24,7 +24,7 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
 
 
 <div class="lesson-header">
-	<h2 class="cut-text">Adding notes to Lesson</h2>
+	<h2 class="cut-text">Adding notes to lesson</h2>
 </div>
 
 
@@ -36,7 +36,7 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
     
     <div class="add-1">
     	<br>
-	    <h2>1. Pick Lesson Highlight</h2>
+	    <h2>1. Pick Lesson Highlight  <i class="fa fa-lightbulb-o"></i></h2>
 	    <br>
 	    <?php
 	        foreach($bullets as $bullet){
@@ -49,15 +49,15 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
 
     <div class="add-2">
 		<br>
-		<h2>2. Add notes to chosen Lesson Highlight</h2>
+		<h2>2. Add notes to chosen Highlight</h2>
 		<br>
-	    <h3>Add Text</h3>
+	    <h3><i class="fa fa-file-text-o paddedicon2"></i>Add Text</h3>
 	    <textarea name="text" rows="6" cols="40"></textarea>
 		<br><br>
-	    <h3>Add Code</h3>
+	    <h3><i class="fa fa-file-code-o paddedicon2"></i>Add Code</h3>
 	    <textarea name="code" rows="6" cols="40"></textarea>
 		<br><br>
-	    <h3>Add Image</h3>
+	    <h3><i class="fa fa-file-image-o paddedicon2"></i>Add Image</h3>
 	    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
 	    Send this Image: <input name="photo" type="file" />
 	    <br><br><br><br><br><br>

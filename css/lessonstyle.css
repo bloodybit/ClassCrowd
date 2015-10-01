@@ -130,6 +130,40 @@ input[type=radio] {
     height: 100%
 }
 
+.bullet-li {
+    width: -moz-calc(100% - 72px);
+    width: -webkit-calc(100% - 72px);
+    width: calc(100% - 72px);
+	background-color: ;
+	padding: 1px 0px 1px 24px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #BDC3C7;
+	margin-top: 96px;
+	margin-bottom: 24px;
+}
+
+.paddedicon {
+	margin-right: 24px;
+}
+
+.paddedicon2 {
+	margin-right: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

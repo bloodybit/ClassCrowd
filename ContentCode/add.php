@@ -28,7 +28,6 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
 </div>
 
 
-<br><br><br>
 
 
 <br><br><br>
@@ -37,10 +36,10 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
     <h2>Add notes to lesson highlight</h2>
     <?php
         foreach($bullets as $bullet){
-            echo '<input type="radio" name="bullet" value="'.$bullet->getId().'">'.$bullet->getBullet().'<br>';
+            echo '<label><input type="radio" name="bullet" value="'.$bullet->getId().'">'.$bullet->getBullet().'</label><br>';
         }
     ?>
-    <input type="radio" name="bullet" value="jolly">Add new Lesson Hightlight: <input type="text" name="newBullet"> <br>
+    <label><input type="radio" name="bullet" value="jolly">Add new Lesson Hightlight:<br><input type="text" name="newBullet"></label> <br>
 
     <h3>Add Text</h3>
     <textarea name="text" rows="10" cols="40"></textarea>

@@ -27,9 +27,7 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
 	<h2 class="cut-text">Adding notes to Lesson</h2>
 </div>
 
-<div class="add-note">
-asdsdf
-</div>
+
 <br><br><br>
 
 

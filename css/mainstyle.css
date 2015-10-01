@@ -76,7 +76,7 @@ h1 {
 }
 
 aside {
-	z-index: 999999999;
+	z-index: 200;
 	position: fixed;
     width: 276px;
     padding-left: 12px;
@@ -231,4 +231,24 @@ input[type=submit]:hover {
     color: white;
 }
 
+#add-lesson-button{
+	width: 190px;
+	background-color:rgb(44, 62, 80);
+	opacity: 0.7;
+}
+#add-lesson-button:hover{
+	opacity: 1;
+}
 
+
+#add-lesson-input{
+	padding: 8px 0px;
+	width: 186px;
+}
+
+#add-lesson-input:focus{
+	outline: none;
+    border: 2px solid rgb(44, 62, 80);
+}
+
+    

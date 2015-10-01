@@ -94,6 +94,18 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
     </div>
 
 </div>
+
+<script type="text/javascript">
+        function showDiv() {
+            divToShow = document.getElementById('new-lesson');
+            divToShow.style.display = "block";
+
+            divToHide = document.getElementById('static-content');
+            divToHide.style.display = "none";
+
+        }
+</script>
+
 </body>
 </html>
 

@@ -14,6 +14,7 @@
 	margin-top:10px;
 }
 
+
 .lesson_box:hover{
 	transition: 0.5s;
  	border-bottom:5px solid #34495E;
@@ -61,4 +62,9 @@
 .lesson_class_name{
 	/*color:#032859;*/
 	font-size:12px;
+}
+
+.lesson_container{
+	width: 840px;
+  	margin:0px auto;
 }

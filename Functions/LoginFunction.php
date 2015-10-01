@@ -41,7 +41,7 @@ if($_POST['mail']!=null && $_POST['pass']!=null){
         $_SESSION['id'] = $item->id;
 
         $connection = Database::getConnection();
-        $query = "SELECT class FROM class WHERE id=".$item->id;
+        $query = "SELECT class FROM class WHERE id=".$item->class_id;
 
         //echo $query;
         $result_obj = $connection->query($query);

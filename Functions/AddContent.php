@@ -98,7 +98,6 @@ if(!file_exists($_FILES['photo'])){
         $connection = Database::getConnection();
 
         //NO safety control!!!
-        $query = "INSERT INTO photo"
     } else {
         $_SESSION['message'] = "Problem with the photo's uploading in the server";
     }

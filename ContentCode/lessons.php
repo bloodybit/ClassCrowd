@@ -44,7 +44,22 @@ if (!empty($lessonsList)) {
                                     echo $className . ' <span class = "lesson_class_name"> / ' . $subjectName->getSubject() . "</span>";
                                     
                                      */
+
+                                    $connection = Database::getConnection();
+                                    $query = "SELECT class FROM class WHERE id=".$_GET['class_id'];
+
+                                
+                                    $result_obj = $connection->query($query);
                                     
+                                        //I COULD USE A FOR AND IT WOULD BE BETTER
+                                        //BUT IT DOESN'T WORK AND I HAVE NO TIME TO
+                                        //FIND THE PROBLEM :)
+                                        $i=0;
+                                        while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
+                                            $class = $result;
+                                            $i++;
+                                        }
+                                    echo $class['class'];
                                     ?> </p>
 
         <p class="lesson_title"> <?php echo $lesson->getTitle(); ?> </p>

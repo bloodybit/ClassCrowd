@@ -10,6 +10,8 @@ require_once 'Classe/note.php';
 require_once 'Classe/photo.php';
 require_once 'Classe/text.php';
 require_once 'Classe/user.php';
+
+session_start();
 ?>
 
 
@@ -51,8 +53,7 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
                 </b></p>
             <p class="cut-text">Class:
                 <?php
-                // $className = Classe::getNameByUserId($_COOKIE['class_id']);
-                // echo $className;
+                    echo $_SESSION['class_name'];
                 ?>
 
             </p>

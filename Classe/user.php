@@ -17,7 +17,7 @@ class User{
 	public $surname;
 	public $mail;
 	public $password;
-	public $class;
+	public $class_id;
 	public $deleted;
 
 	function __construct($input = false){

@@ -42,8 +42,3 @@
 .add-note > a:hover {
 	background-color: #1ABC9C;
 }
-
-input[type=radio] {
-	width: 24px;
-}
-

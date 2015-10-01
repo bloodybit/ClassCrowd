@@ -36,7 +36,7 @@ $_SESSION['subject_id'] = $_GET['subject_id'];
     
     <div class="add-1">
     	<br>
-	    <h2>1. Pick Lesson Highlight  <i class="fa fa-lightbulb-o"></i></h2>
+	    <h2>1. Pick Lesson Highlight<i class="fa fa-lightbulb-o paddedicon3"></i></h2>
 	    <br>
 	    <?php
 	        foreach($bullets as $bullet){

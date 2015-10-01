@@ -21,9 +21,15 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
 
 ?>
 
+
 <div class="lesson-header">
-<h2>Add a note to Lesson</h2>
+	<h2 class="cut-text">Adding notes to Lesson</h2>
 </div>
+
+<div class="add-note">
+asdsdf
+</div>
+<input type="submit" value="Add Content">
 
 <br><br><br>
 
@@ -46,7 +52,7 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
     Send this Image: <input name="photo" type="file" />
     <br><br>
-    <input type="submit" value="Add Content">
+    
 
     <p><?php if(!empty($_SESSION['message'])){
             echo 'ERROR: '.$_SESSION['message'];

@@ -22,11 +22,14 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 ?>
 
 <div class="lesson-header">
-	<h2>Showing notes about Lesson</h2>
+	<h2 class="cut-text">Showing notes about Lesson</h2>
+</div>
+
+<div class="add-note">
+<?php echo '<a href="main.php?sidebar=lessons&subject_id='. $_GET['subject_id'].'&content=add&lesson_id='.$_GET['lesson_id'].'"<h2><i class="fa fa-pencil-square-o"></i> Edit lesson</h2></a>'; ?>
 </div>
 
 <br><br><br>
-<?php echo '<a href="main.php?sidebar=lessons&subject_id='. $_GET['subject_id'].'&content=add&lesson_id='.$_GET['lesson_id'].'"<h2>ADD</h2></a>'; ?>
 
 
 <h3>Lesson highlights:</h3>

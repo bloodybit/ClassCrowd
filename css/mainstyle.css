@@ -76,7 +76,7 @@ h1 {
 }
 
 aside {
-	z-index: 100;
+	z-index: 999999999;
 	position: fixed;
     width: 276px;
     padding-left: 12px;

@@ -9,6 +9,7 @@ include_once 'DbFunction.php';
 
 session_start();
 
+
 $bullet = $_POST['bullet'];
 
 if(empty($bullet)){
@@ -36,6 +37,7 @@ if($bullet=='jolly'){
         $connection = Database::getConnection();
 
         $query = "SELECT id FROM bullet WHERE deleted=false AND bullet='".$_POST['newBullet']."' AND lecture_id=".$_SESSION['lesson_id'];
+
 
         $result_obj = $connection->query($query);
         try{
@@ -101,7 +103,7 @@ if(!file_exists($_FILES['photo'])){
 
         //NO safety control!!!
         $query = 'INSERT INTO photo (lecture_id, path, bullet_id, user_id) VALUES ('. $_SESSION['lesson_id'].', "'
-            . $uploadfile . '", ' . $bullet . ', 'mb . $_COOKIE['id'] . ")";
+            . $uploadfile . '", ' . $bullet . ', ' . $_COOKIE['id'] . ")";
 
         //echo $query;
         $result = $connection->query($query);

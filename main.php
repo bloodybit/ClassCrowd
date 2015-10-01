@@ -27,6 +27,8 @@ require_once 'Classe/user.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
+
+
 <?php 
 
 //session_start();
@@ -95,6 +97,8 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
 
 </div>
 
+
+
 <script type="text/javascript">
         function showDiv() {
             divToShow = document.getElementById('new-lesson');
@@ -105,6 +109,8 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
 
         }
 </script>
+
+
 
 </body>
 </html>

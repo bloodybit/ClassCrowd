@@ -92,7 +92,7 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
                 }
                 if($note->getKind() == "photo"){
                     $photo = $note->getObject();
-                    echo '<img src="'.$photo->getPath().'" height=400>';
+                    echo '<img class="doc-img" src="'.$photo->getPath().'" height=200>';
                 }
             }
     }
@@ -100,3 +100,15 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 </ul>
 
 
+
+
+
+  <img class="doc-img crossRotate" src="http://placehold.it/100" alt="Cross Menu button" tabindex="1" />
+  
+  
+  
+<script type="text/javascript">
+	$('.crossRotate').on('click', function(){
+		  $(this).toggleClass('active');
+		});
+</script>

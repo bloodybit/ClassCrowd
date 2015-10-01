@@ -87,29 +87,30 @@ if(!empty($_POST['code'])){
 
 if(!file_exists($_FILES['photo'])){
 
-    $uploaddir = '../img/';
+    $uploaddir = 'img/';
 
     $extension = end(explode('.', $_FILES['photo']['name']));
     $uploadfile = $uploaddir . basename($_FILES['photo']['tmp_name']. ".". $extension);
 
 
-    if(move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
+    if(move_uploaded_file($_FILES['photo']['tmp_name'], "../".$uploadfile)) {
         //File uploaded in the server
 
         // Add the new path in the Database
         $connection = Database::getConnection();
 
         //NO safety control!!!
-        $query = "INSERT INTO photo (lecture_id, path, bullet_it, user_id) VALUES (". $_SESSION['lesson_id'].", '"
+        $query = "INSERT INTO photo (lecture_id, path, bullet_id, user_id) VALUES (". $_SESSION['lesson_id'].", '"
             . $uploadfile . "', " . $bullet . ", " . $_COOKIE['id'] . ")";
 
-        echo $query;
+        //echo $query;
         $result = $connection->query($query);
     } else {
-        echo " 00 ";
         $_SESSION['message'] = "Problem with the photo's uploading in the server";
     }
 }
 
+//echo "qui";
 $_SESSION['message'] = "DONE!";
-header('Location: ../main.php?sidebar=lessons&subject_id='.$_GET['subject_id'] . "&content=doc&lesson_id="$_GET['lesson_id']);
+//echo '"Location: ../main.php?sidebar=lessons&subject_id=' . $_SESSION['subject_id'] . '&content=doc&lesson_id=' . $_SESSION['lesson_id']. '""';
+header('Location: ../main.php?sidebar=lessons&subject_id=' . $_SESSION['subject_id'] . '&content=doc&lesson_id=' . $_SESSION['lesson_id']);

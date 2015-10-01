@@ -116,6 +116,7 @@
 
 }
 
+
 .sidebar-link:not:first-child{
 	color: red !important;
 }
@@ -126,4 +127,8 @@
 
 #subject-title{
 	font-size:17px;
+}
+
+#subject-sub-title{
+	font-size: 14px;
 }

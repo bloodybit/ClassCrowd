@@ -53,6 +53,7 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
                 </b></p>
             <p class="cut-text">Class:
                 <?php
+                //echo the user's class
                     echo $_SESSION['class_name'];
                 ?>
 

@@ -49,8 +49,8 @@ session_start();
                 </b></p>
             <p class="cut-text">Class:
                 <?php
-                $className = Classe::getNameByUserId($_COOKIE['class_id']);
-                echo $className;
+//                $className = Classe::getNameByUserId($_COOKIE['class_id']);
+//                echo $className;
                 ?>
 
             </p>

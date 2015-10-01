@@ -26,13 +26,33 @@ if($bullet=='jolly'){
         $query = "INSERT INTO bullet (lecture_id, bullet, user_id) VALUES (".$_SESSION['lesson_id'].",
         '".$_POST['newBullet'] . "', " . $_COOKIE['id']. ")";
 
-        echo $query;
+        //echo $query;
 
         $result = $connection->query($query);
-        echo $result;
-        // ERORR IR HERE
-        $bullet = $result; // !! IMPORTANT set new Bullet's Name
-        //$RESULT IS ONE BECAUSE IS GOOD NOT ID
+        //echo $result;
+        // ERROR IR HERE
+        // !! IMPORTANT set new Bullet's Name
+
+        $connection = Database::getConnection();
+
+        $query = "SELECT id FROM bullet WHERE deleted=false AND bullet='".$_POST['newBullet']."' AND lecture_id=".$_SESSION['lesson_id'];
+
+        $result_obj = $connection->query($query);
+        try{
+            //I COULD USE A FOR AND IT WOULD BE BETTER
+            //BUT IT DOESN'T WORK AND I HAVE NO TIME TO
+            //FIND THE PROBLEM :)
+            $i=0;
+            while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
+                $id = $result;
+                $i++;
+            }
+
+            $bullet = $id['id'];
+
+        } catch(Exception $e){
+            $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
+        }
     } else {
         $_SESSION['message'] = "Set new bullet's name";
         header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -50,9 +70,22 @@ if(!empty($_POST['text'])){
     $query = "INSERT INTO text (lecture_id, text, bullet_id, user_id) VALUES (". $_SESSION['lesson_id'].", '"
         . $_POST['text'] . "', ".$bullet . ", " . $_COOKIE['id'].")";
 
-    echo $query;
     $result = $connection->query($query);
 }
 
+
+if(!empty($_POST['code'])){
+    //Upload new Code
+    $connection = Database::getConnection();
+
+    // !! NO SAFETY CONTROL!!
+    $query = "INSERT INTO code (lecture_id, code, bullet_id, user_id) VALUES(".$_SESSION['lesson_id'].", '"
+        . $_POST['code'] . "', " . $bullet . ", " . $_COOKIE['id'] . ")";
+
+    $result = $connection->query($query);
+}
+
+if(!empty)
+
 $_SESSION['message'] = "DONE!";
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ../main.php');

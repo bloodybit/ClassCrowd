@@ -97,4 +97,5 @@ class Bullet{
             $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
         }
     }
+
 }

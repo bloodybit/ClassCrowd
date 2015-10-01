@@ -8,11 +8,10 @@ if(isset($_GET['subject_id'])){
 }
 ?>
 
-<h2>Lessons</h2>
+<h2><?php echo($subjectName); ?>'s Lessons</h2>
 <br>
-<h5><?php echo($subjectName); ?>'s Lessons</h5>
 <?php
-echo $_GET['subject_id'. " ee "];
+//echo $_GET['subject_id'/*. " ee "*/];
 $lessonsList = Lesson::getLessonsBySubjectId($_GET['subject_id']);
 
 foreach($lessonsList as $lesson){
@@ -21,5 +20,5 @@ foreach($lessonsList as $lesson){
     echo '<div class="sidebar-link"><a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'">'. $lessonDate." - ".$lesson->getTitle()."</a></div>";
 }
 ?>
-<br><br><br>
-<a href="main.php?sidebar=class">Back to class</a>
+<br><br>
+<a href="main.php?sidebar=class">Back to classes</a>

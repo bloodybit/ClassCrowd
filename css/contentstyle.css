@@ -89,7 +89,10 @@
 
 }
 
-
+.front-page-emmpty-list{
+	    margin-top: 35px !important;
+    margin-left: 50px !important;
+}
 
 #empty-list{
 	margin-top: 130px;
@@ -116,7 +119,6 @@
 	border-bottom: 1px #34495E dotted;
 
 }
-
 
 
 .sidebar-link:not:first-child{

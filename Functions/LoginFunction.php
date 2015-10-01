@@ -18,7 +18,7 @@ if($_POST['mail']!=null && $_POST['pass']!=null){
 
     $connection = Database::getConnection();
 
-    $query = "SELECT id, name FROM user WHERE mail='".$mail."' AND password='".$password."'";
+    $query = "SELECT id, name, class_id FROM user WHERE mail='".$mail."' AND password='".$password."'";
 
     $result_obj = $connection->query($query);
     try {
@@ -37,6 +37,7 @@ if($_POST['mail']!=null && $_POST['pass']!=null){
         exit();
     }else{
         setcookie("id", $item->id, time()+ 3600 * 24 * 30, '/'); //Save cookie for 30 days
+        setcookie("class_id", $item->class_id, time()+ 3600 * 24 * 30, '/');
         $_SESSION['id'] = $item->id;
 
         header('Location:../main.php');

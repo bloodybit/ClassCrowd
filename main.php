@@ -21,15 +21,69 @@ session_start();
     }
 ?>
 
-<h1>MAIN</h1>
 
-<h1>Sidebar</h1>
-<div id="sidebar">
-    <?php loadSidebar($_GET['sidebar'], 'class'); ?>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClassCrowd</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/contentstyle.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
 
-<h1>Content</h1>
-<div id="content">
-    <?php loadContent($_GET['content'], 'empty'); ?>
+
+<aside>
+    <section class="avatar-wrap">
+        <img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
+        <div id="avatar-txt">
+            <p class="cut-text"><b>
+
+                    <?php  //user NAME and SURNAME
+                    $user = User::getUserById($_COOKIE['id']);
+                    echo $user->name . " " . $user->surname;
+
+                    ?>
+                </b></p>
+            <p class="cut-text">Class:
+
+
+            </p>
+
+            <p class="logout"><a href="Functions/LogoutFunction.php"><i class="fa fa-sign-out"></i> Log out</a></p>
+        </div>
+    </section>
+
+    <div id="aside-overflow">
+        <section class="sidebar-wrap">
+            <div id="sidebar">
+                <?php loadSidebar($_GET['sidebar'], 'class'); ?>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>ClassCrowd</p>
+        <p id="byline">Made with <i class="fa fa-heart"></i> by<br>Alberto, Anders, Riccardo, Viesturs</p>
+    </footer>
+
+</aside>
+
+
+
+
+<div class="wrapper">
+
+    <h1>Content</h1>
+    <div id="content">
+        <?php loadContent($_GET['content'], 'empty'); ?>
+    </div>
+
 </div>
-<a href="Functions/LogoutFunction.php">Logout</a>
+</body>
+</html>
+
+
+

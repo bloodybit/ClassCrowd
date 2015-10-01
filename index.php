@@ -9,86 +9,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ClassCrowd</title>
-    <link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<title>ClassCrowd</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+	<link rel="stylesheet" type="text/css" href="css/indexstyle.css" />
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <aside>
-	<!--
-	<div id="avatar">
-		<img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
-		<div id="avatar-txt">
-			<p class="cut-text"><b>asdf</b></p>
-			<p class="cut-text">5915web1ei</p>
-		</div>
-	</div>
-	-->
+	<div id="aside-overflow">
 
+		<section class="login-wrap">
+			<h2>Existing user</h2>
+			<form class="login-card" action="Functions/LoginFunction.php" method="post">
+				<input type="text" name="mail" class="input-field" placeholder="Email">
+				<input type="password" name="pass" class="input-field" placeholder="Password">
+				<input type="submit" name="login" class="login login-submit" value="Log in">
+			</form>
+			<div class="error-message">
+				<?php
+				//session_start();
 
-	<section class="login-wrap">	
-		<h2>Login</h2>
-		<form class="login-card" action="Functions/LoginFunction.php" method="post">
-			<input type="text" name="mail" class="input-field" placeholder="Email">
-			<input type="password" name="pass" class="input-field" placeholder="Password">
-			<input type="submit" name="login" class="login login-submit" value="Log in">
-		</form>
-		<div class="error-message">
-			<?php
-				session_start();
-	
 				if(isset($_SESSION['message'])){
 					echo("<p>".$_SESSION['message']."</p>");
 					unset($_SESSION['message']);
 				}
-			?>
-		</div>
-	</section>
-	
-	<section class="register-wrap">
-		<h2>Register</h2>
-        <form class="registration-card" onSubmit="return formValidation();">
-            <ul>
-                <li><label for="firstname">First name:</label></li>
-                <li><input type="text" name="firstname" size="14" /></li>
+				?>
+			</div>
+		</section>
 
-                <li><label for="lastname">Last name:</label></li>
-                <li><input type="text" name="lastname" size="14" /></li>
+		<section class="register-wrap">
+			<h2>New user</h2>
+			<form class="registration-card">
 
-                <li><label for="mail">e-mail address:</label></li>
-                <li><input type="text" name="mail" size="24" /></li>
+				<input type="text" id="firstname" class="input-field" placeholder="First name" />
+				<div id="firstFeedback" class="error-message"></div>
 
-                <li><label for="password">Password:</label></li>
-                <li><input type="password" name="password" size="24"></li>
+				<input type="text" id="lastname" class="input-field" placeholder="Last name" />
+				<div id="lastFeedback" class="error-message"></div>
 
-                <li><label for="repassword">Repeat password:</label></li>
-                <li><input type="password" name="repassword" size="24"></li>
+				<input type="text" id="mail" class="input-field" placeholder="Email address" />
+				<div id="mailFeedback" class="error-message"></div>
 
-                <li><label for="class">Class:</label></li>
-                <li><select name="class">
-                <option  value="Default">Please select your class:</option>
-                <option value="WebDev1st">Web Development, 1st sem.</option>
-                </select></li>
+				<input type="password" id="password" class="input-field" placeholder="New Password" />
+				<div id="passFeedback" class="error-message"></div>
 
-                <li><input type="submit" name="registration" value="Register!"></li>
-            </ul>
+				<input type="password" id="repassword" class="input-field" placeholder="Repeat Password" />
+				<div id="repassFeedback" class="error-message"></div>
 
-        </form>
-	</section>
-	
-	<footer>
-		<p>ClassCrowd</p>
-		<p id="byline">Made with love by<br>Alberto, Anders, Riccardo, Viesturs</p>
-	</footer>
-	
+				<select id="studentClass">
+					<option value="Default">Please select your class:</option>
+					<option value="WebDev1st">Web Development, 1st sem.</option>
+				</select>
+				<div id="classFeedback" class="error-message"></div>
+
+				<input type="submit" name="registration" value="Sign up">
+			</form>
+		</section>
+
+		<footer>
+			<p>ClassCrowd</p>
+			<p id="byline">Made with <i class="fa fa-heart"></i> by<br>Alberto, Anders, Riccardo, Viesturs</p>
+		</footer>
+
+	</div>
 </aside>
 
 
 
-<div class="wrapper animatedBackground">
+<div class="wrapper">
+	<div class="anim-wrap">
+		<div class="animated-background"></div>
+	</div>
 	<div id="index-info">
-		<br><br><br><br><br>
+
 		<h1>ClassCrowd</h1>
 		<p>ClassCrowd is an online collaborative notebook for you and your class.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -96,6 +91,7 @@
 	</div>
 </div>
 
+<script src="registrationCheck.js"></script>
 </body>
 </html>
 

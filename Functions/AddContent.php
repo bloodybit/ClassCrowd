@@ -86,10 +86,12 @@ if(!empty($_POST['code'])){
 }
 
 if(!file_exists($_FILES['photo'])){
-    $uploaddir = 'img/';
+
+    $uploaddir = '../img/';
 
     $extension = end(explode('.', $_FILES['photo']['name']));
     $uploadfile = $uploaddir . basename($_FILES['photo']['tmp_name']. ".". $extension);
+
 
     if(move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
         //File uploaded in the server
@@ -98,10 +100,16 @@ if(!file_exists($_FILES['photo'])){
         $connection = Database::getConnection();
 
         //NO safety control!!!
+        $query = "INSERT INTO photo (lecture_id, path, bullet_it, user_id) VALUES (". $_SESSION['lesson_id'].", '"
+            . $uploadfile . "', " . $bullet . ", " . $_COOKIE['id'] . ")";
+
+        echo $query;
+        $result = $connection->query($query);
     } else {
+        echo " 00 ";
         $_SESSION['message'] = "Problem with the photo's uploading in the server";
     }
 }
 
 $_SESSION['message'] = "DONE!";
-header('Location: ../main.php');
+header('Location: ../main.php?sidebar=lessons&subject_id='.$_GET['subject_id'] . "&content=doc&lesson_id="$_GET['lesson_id']);

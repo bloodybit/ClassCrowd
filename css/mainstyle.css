@@ -55,7 +55,6 @@ a:visited {
 	position: absolute;
     top: 0px;
     left: 300px;
-    height: 100%;
     width: -moz-calc(100% - 336px);
     width: -webkit-calc(100% - 336px);
     width: calc(100% - 336px);

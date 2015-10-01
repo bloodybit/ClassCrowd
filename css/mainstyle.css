@@ -1,5 +1,6 @@
 html {
     font-family: 'Lato', Arial, sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 header, section, aside, nav {
     display: block;

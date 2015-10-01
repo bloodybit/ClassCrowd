@@ -78,13 +78,14 @@
 
 #arrow-left{
 	position: absolute;
+	z-index: 300;
     -ms-transform: rotate(39deg);
     -webkit-transform: rotate(39deg);
     transform: rotate(39deg);
     top: -88px;
     width: 160px;
     left: -176px;
-    z-index: 100;
+   
     pointer-events: none;
 
 }

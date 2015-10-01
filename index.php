@@ -102,8 +102,7 @@ session_start();
 
 		<h1>ClassCrowd</h1>
 		<p><b>ClassCrowd is an online collaborative notebook for you and your class.</b></p>
-		<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
-		<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+		<p><b>Our goal is to help students providing them notes and information about every lecture, and we want to do this by making a collaborative notebook in which everyone can easily confront each other and share their knowledge, getting a richer and more complete learning experience.</b></p>
 	</div>
 </div>
 

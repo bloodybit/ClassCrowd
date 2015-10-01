@@ -17,39 +17,56 @@ if(isset($_GET['subject_id'])){
 <div class="lesson_container">
 <h1><?php echo($subjectName); ?>'s Lessons</h1>
 <?php
+
     $lessonsList = Lesson::getLessonsBySubjectId($_GET['subject_id']);
 
-    foreach($lessonsList as $lesson){
+if (!empty($lessonsList)) {
+ foreach($lessonsList as $lesson){
     ?>
     <?php echo '<a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'"> '?><div class="lesson_box"> 
     <?php
         //format the date
-    	$day = date('j', strtotime($lesson->getDate()));
+        $day = date('j', strtotime($lesson->getDate()));
         $year = date('Y', strtotime($lesson->getDate()));
-   		$month = date('F', strtotime($lesson->getDate()));
+        $month = date('F', strtotime($lesson->getDate()));
         /*$lessonDate = date("d/m/y", strtotime($lesson->getDate()));*/
- 	?>
+    ?>
 
-		<p class="lesson_day"> <?php echo $day; ?> </p>
-		<p class="lesson_month"> <?php echo $month; ?> </p>
-		
+        <p class="lesson_day"> <?php echo $day; ?> </p>
+        <p class="lesson_month"> <?php echo $month; ?> </p>
+        
 
-		<p class="lesson_subject"> <?php /*
-									echo $sub_name . ' <span class = "lesson_class_name"> / ' . $class_name . "</span>";
-									$subjectName = Subject::getSubjectById($lesson->getSubjectId());
-									$className = Classe::getNameById($subjectName->getId());
+        <p class="lesson_subject"> <?php /*
+                                    echo $sub_name . ' <span class = "lesson_class_name"> / ' . $class_name . "</span>";
+                                    $subjectName = Subject::getSubjectById($lesson->getSubjectId());
+                                    $className = Classe::getNameById($subjectName->getId());
 
-									echo $className . ' <span class = "lesson_class_name"> / ' . $subjectName->getSubject() . "</span>";
-									
-									 */?> </p>
+                                    echo $className . ' <span class = "lesson_class_name"> / ' . $subjectName->getSubject() . "</span>";
+                                    
+                                     */
+                                    
+                                    ?> </p>
 
+        <p class="lesson_title"> <?php echo $lesson->getTitle(); ?> </p>
 
-		<p class="lesson_title"> <?php echo $lesson->getTitle(); ?> </p>
+        </div>  </a>
 
-		</div>  </a>
-
- 	<?php
+    <?php
         /*echo '<br><a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'">'. $lessonDate." - ".$lesson->getTitle()."</a>";*/
     }
 ?>
-	</div>
+    </div>
+<?php
+}
+else{ 
+
+?>
+
+    <ul id="empty-list">
+
+        <li><span>There are no <span class="special-char">lessons</span> added to this <span class="special-char">Subject</span> yet!</li>
+       
+    </ul>
+
+<?php
+   }?>

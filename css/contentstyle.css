@@ -115,3 +115,11 @@
 	border-bottom: 1px #34495E dotted;
 
 }
+
+.sidebar-link:not:first-child{
+	color: red !important;
+}
+
+.sidebar-link:not:first-child{
+	background-color: red !important;
+}

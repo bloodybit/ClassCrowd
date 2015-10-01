@@ -69,7 +69,7 @@ class Lesson{
         //get connection
         $connection = Database::getConnection();
 
-        $query = 'SELECT * FROM lesson WHERE subject_id='.$subject_id.' AND deleted=false ORDER BY date ASC';
+        $query = 'SELECT * FROM lesson WHERE subject_id='.$subject_id.' AND deleted=false ORDER BY date DESC';
 
         //Run the query
         $result_obj = $connection->query($query);

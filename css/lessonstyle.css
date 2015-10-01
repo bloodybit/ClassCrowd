@@ -1,3 +1,7 @@
+html {
+	background-color: #ECF0F1;
+}
+
 .lesson-header {
 	position: fixed;
 	background-color: #2C3E50;
@@ -46,25 +50,53 @@
 
 input[type=radio] {
 	width: 24px;
+	margin-bottom: 24px;
+}
+
+.input-addnew {
+	width: 24px;
+	margin-top: 24px;
 }
 
 
+.newbullet {
+    width: -moz-calc(100% - 24px);
+    width: -webkit-calc(100% - 24px);
+    width: calc(100% - 24px);
+}
+
+
+.form-wrap {
+	background-color: red;
+	height: 100%;
+}
 
 .add-1 {
+	background: #BDC3C7;
 	position: absolute;
 	top: 58px;
 	left: 0px;
-	width: 500px;
-	padding-left: 24px;
+	width: 304px;
+	padding-left: 48px;
+	padding-right: 48px;
+    height: -moz-calc(100vh - 116px);
+    height: -webkit-calc(100vh - 116px);
+    height: calc(100vh - 116px);
 }
 
 
 .add-2 {
+	background-color: #ECF0F1;
 	position: absolute;
 	top: 58px;
 	right: 0px;
-	width: 500px;
-	padding-left: 24px;
+	padding-left: 48px;
+    height: -moz-calc(100vh - 116px);
+    height: -webkit-calc(100vh - 116px);
+    height: calc(100vh - 116px);
+    width: -moz-calc(100% - 448px);
+    width: -webkit-calc(100% - 448px);
+    width: calc(100% - 448px);
 }
 
 .add-3 {
@@ -83,7 +115,23 @@ input[type=radio] {
 
 .add-3 > input {
 	position: absolute;
-	margin-left: -100px;
-	left: 50%;
+	margin-left: -118px;
+	left: 400px;
 }
+
+
+
+.bg1 {
+	background: #BDC3C7;
+	position: fixed;
+	top: 58px;
+	left: 0px;
+	width: 700px;
+    height: 100%
+}
+
+
+
+
+
 

@@ -22,5 +22,6 @@ foreach($lessonsList as $lesson){
 ?>
 <br><br>
 
-<a href="main.php?sidebar=class"><i class="fa fa-arrow-circle-left"></i> Back to Classes</a><br>
-<a href="main.php?sidebar=subject&class_id=<?php echo $_GET['class_id'];?>"><i class="fa fa-arrow-circle-left"></i> Back to Subject</a>
+<a href="main.php?sidebar=subject&class_id=<?php echo $_GET['class_id'];?>"><i class="fa fa-arrow-circle-o-left"></i> Back to Subject</a>
+<br>
+<a href="main.php?sidebar=class"><i class="fa fa-arrow-circle-left"></i> Back to Classes</a>

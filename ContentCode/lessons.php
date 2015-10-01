@@ -12,6 +12,8 @@ if(isset($_GET['subject_id'])){
     //Subject name
     $subjectName = Subject::getSubjectById($_GET['subject_id']);
 }
+
+$_SESSION['class_id'] = $_GET['class_id'];
 ?>
 
 <div class="lesson_container">
@@ -23,7 +25,7 @@ if(isset($_GET['subject_id'])){
 
 ?>
 <a href="add-new-lesson"><div class="lesson_box"> 
-<i class="fa fa-plus"></i>
+<i class="fa fa-plus"></i><form action="Functions/AddLesson.php"
 </div></a>
 
 <?php

@@ -24,7 +24,7 @@ $_SESSION['class_id'] = $_GET['class_id'];
 
 
 ?>
-<a href="#" onclick="javascript:showDiv();">"><div class="lesson_box"> 
+<a href="#" onclick="javascript:showDiv();"><div class="lesson_box"> 
      <div id="static-content"<i class="fa fa-plus"></i></div>
 
     <div id="new-lesson">

@@ -22,6 +22,4 @@ foreach($lessonsList as $lesson){
 ?>
 <br><br>
 
-<!--<a href="main.php?sidebar=subject&class_id="><i class="fa fa-arrow-circle-o-left"></i> Back to Subjects</a> 
-<br> -->
 <a href="main.php?sidebar=class"><i class="fa fa-arrow-circle-left"></i> Back to Classes</a>

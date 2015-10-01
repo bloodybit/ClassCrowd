@@ -1,4 +1,24 @@
 .lesson-header {
 	position: fixed;
+	background-color: #95A5A6;
+	top: 0px;
+	left: 300px;
+	height: 116px;
+	height: 58px;
+	width: 100%;
+	color: white;
+}
+
+.lesson-header > h2 {
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 24px;
+}
+
+.add-note {
 	background-color: red;
+	color: red;
+	z-index: 99999999999999999999999999;
+	position: absolute;
+	right: 0px;
 }

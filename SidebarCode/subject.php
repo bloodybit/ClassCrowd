@@ -12,15 +12,28 @@
                                             $class = $result;
                                             $i++;
                                         }
-                                   
+                                  
+                                  if(isset($_GET['subject_id'])){
+    //Subject name
+    $subjectName = Subject::getSubjectById($_GET['subject_id']);
+}
 ?>
 
-<h2><?php  echo $class['class'] . ' / '; ?><span id="subject-title">Subjects</span></h2>
+
+<h2><?php  echo $class['class'] . ' / '; ?><span id="subject-title">Subjects <span id="subject-sub-title">
+<?php if(isset($subjectName))
+echo(" / " . $subjectName);?></span></span></h2>
+
+
 <br>
 <?php
     $subjects = Subject::getSubjectByClass($_GET['class_id']);
 
  if (!empty($subjects)) {
+
+            
+
+         
     foreach($subjects as $sub){
         echo('<div class="sidebar-link"><a href="main.php?sidebar=subject&class_id='.$_GET['class_id'].'&subject_id='.$sub->getId().'&content=lessons">'.$sub->getSubject().'</a></div>');
     }
@@ -28,6 +41,8 @@
  else{
  	echo "No subjects created yet!";
  }
+
+
 //main.php?sidebar=subject&subject_id='.$sub->getId().'&content=lessons
 ?>
 

@@ -11,4 +11,4 @@
 
 <!--  <a href="main.php?sidebar=lessons">Lessons</a> -->
 <br><br>
-<a href="main.php?sidebar=class"><i class="fa fa-arrow-circle-o-left"></i> Back to Classes</a>
+<a href="main.php?sidebar=class"><i class="fa fa-arrow-circle-left"></i> Back to Classes</a>

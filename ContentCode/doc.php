@@ -30,7 +30,7 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 </div>
 
 
-
+<br>
 
 
 <ul>
@@ -84,11 +84,11 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
             foreach($notes as $note){
                 if($note->getKind() == 'text'){
                     $text = $note->getObject();
-                    echo "<p>".$text->getText()."</p>";
+                    echo "<p class='notes-p'>".$text->getText()."</p>";
                 }
                 if($note->getKind() == "code"){
                     $code = $note->getObject();
-                    echo "<p>".$code->getCode()."</p>";
+                    echo "<p class='notes-code notes-p'>".$code->getCode()."</p>";
                 }
                 if($note->getKind() == "photo"){
                     $photo = $note->getObject();
@@ -99,16 +99,3 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 ?>
 </ul>
 
-
-
-
-
-  <img class="doc-img crossRotate" src="http://placehold.it/100" alt="Cross Menu button" tabindex="1" />
-  
-  
-  
-<script type="text/javascript">
-	$('.crossRotate').on('click', function(){
-		  $(this).toggleClass('active');
-		});
-</script>

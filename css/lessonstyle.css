@@ -157,30 +157,37 @@ input[type=radio] {
 }
 
 
+.notes-wrap {
+	padding-left: 24px;
+}
+
+.notes-code {
+	font-family: 'Droid Sans Mono' !important;
+	color: #3498DB;
+}
+
+.notes-p {
+	padding-top: 24px;
+	width: -moz-calc(100% - 72px);
+    width: -webkit-calc(100% - 72px);
+    width: calc(100% - 72px);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	
+}
+
 .doc-img {
-  display: block;
-  margin: 20px;
+	padding-top: 24px;
+	margin-right: 24px;
 }
 
-.crossRotate {
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  outline: 0;
-}
-
-.crossRotate.active {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+.doc-img:active {
+	transform-origin: top left;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    }
 
 
 

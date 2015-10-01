@@ -32,8 +32,8 @@ $_SESSION['class_id'] = $_GET['class_id'];
         <div id="static-content"<i class="fa fa-plus"></i></div>
         <div id="new-lesson">
              <form action="Functions/AddLesson.php" method="post">
-                New Lesson's name: <input type="text" name="newLesson">
-                <input type="submit" value="Add Lesson">
+                New Lesson's name: <input type="text" name="newLesson" id="add-lesson-input">
+                <input type="submit" value="Add Lesson" id="add-lesson-button">
             </form>
 
         </div>

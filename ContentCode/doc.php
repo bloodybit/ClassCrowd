@@ -22,19 +22,20 @@ $bullets = Bullet::getBulletsByLesson($_GET['lesson_id']);
 ?>
 
 <div class="lesson-header">
-asdf
+	<h2>Showing notes about Lesson</h2>
 </div>
 
-<h1>Document</h1>
-
-<h5>Bullets</h5>
-
+<br><br><br>
 <?php echo '<a href="main.php?sidebar=lessons&subject_id='. $_GET['subject_id'].'&content=add&lesson_id='.$_GET['lesson_id'].'"<h2>ADD</h2></a>'; ?>
+
+
+<h3>Lesson highlights:</h3>
+<br>
 
 <ul>
 <?php
     foreach($bullets as $bullet){
-        echo '<li>'.$bullet->getBullet().'</li>';
+        echo '<li class=""bullet-li>'.$bullet->getBullet().'</li>';
 
             //2) get Text in each bullets
             $texts = Text::getTextByBullet($bullet->getId());

@@ -21,7 +21,11 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
 
 ?>
 
-<h1>Add Content</h1>
+<div class="lesson-header">
+<h2>Add a note to Lesson</h2>
+</div>
+
+<br><br><br>
 
 <form enctype="multipart/form-data" action="Functions/AddContent.php" method="post">
     <h2>Add to Bullet</h2>

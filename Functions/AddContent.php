@@ -100,8 +100,8 @@ if(!file_exists($_FILES['photo'])){
         $connection = Database::getConnection();
 
         //NO safety control!!!
-        $query = "INSERT INTO photo (lecture_id, path, bullet_id, user_id) VALUES (". $_SESSION['lesson_id'].", '"
-            . $uploadfile . "', " . $bullet . ", " . $_COOKIE['id'] . ")";
+        $query = 'INSERT INTO photo (lecture_id, path, bullet_id, user_id) VALUES ('. $_SESSION['lesson_id'].', "'
+            . $uploadfile . '", ' . $bullet . ', 'mb . $_COOKIE['id'] . ")";
 
         //echo $query;
         $result = $connection->query($query);

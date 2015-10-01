@@ -10,15 +10,6 @@ require_once 'Classe/note.php';
 require_once 'Classe/photo.php';
 require_once 'Classe/text.php';
 require_once 'Classe/user.php';
-
-
-
-session_start();
-
-    if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
-        $_SESSION['message'] = "Your not allow to see this section";
-        header("Location:index.php");
-    }
 ?>
 
 
@@ -26,14 +17,25 @@ session_start();
 <html>
 <head>
     <title>ClassCrowd</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
     <link rel="stylesheet" type="text/css" href="css/contentstyle.css" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body>
 
+<?php 
+
+session_start();
+
+if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
+	$_SESSION['message'] = "Your not allow to see this section";
+	header("Location:index.php");
+}
+
+?>
+
+<body>
 
 <aside>
     <section class="avatar-wrap">

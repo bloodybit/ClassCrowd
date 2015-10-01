@@ -89,7 +89,7 @@ if(!file_exists($_FILES['photo'])){
     $uploaddir = 'img/';
 
     $extension = end(explode('.', $_FILES['photo']['name']));
-    echo "ww";
+    echo "eww " . $_FILES['photo']['name'];
     $uploadfile = $uploaddir . basename($_FILES['photo']['tmp_name']. ".". $extension);
     echo $uploadfile;
 }

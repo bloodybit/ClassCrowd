@@ -1,5 +1,6 @@
 html {
     font-family: 'Lato', Arial, sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 header, section, aside, nav {
     display: block;
@@ -111,7 +112,7 @@ body {
 }
 
 h1 {
-	font-size: 60pt;
+	font-size: 72pt;
 }
 
 aside {

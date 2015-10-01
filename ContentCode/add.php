@@ -41,7 +41,8 @@ $_SESSION['lesson_id'] = $_GET['lesson_id'];
     <h3>Add Img</h3>
     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
     Send this Image: <input name="photo" type="file" />
-    <input type="submit" value="AddContent">
+    <br><br>
+    <input type="submit" value="Add Content">
 
     <p><?php if(!empty($_SESSION['message'])){
             echo 'ERROR: '.$_SESSION['message'];

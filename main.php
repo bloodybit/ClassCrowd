@@ -45,7 +45,7 @@ if($_SESSION['id']!=$_COOKIE['id'] || !isset($_COOKIE['id'])){
 
 <aside>
     <section class="avatar-wrap">
-        <img id="avatar-pic" src="http://i.imgur.com/iAmtHlm.png">
+        <a href="main.php?sidebar=uploadImg"><img id="avatar-pic" src="<?php echo $_SESSION['photoUsr']; ?>"></a>
         
         <div id="avatar-txt">
             <p class="cut-text"><b>

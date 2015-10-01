@@ -64,6 +64,7 @@ if($_POST['mail']!=null && $_POST['pass']!=null){
             $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
         }
 
+        $_SESSION['photoUsr'] = $item->img;
 
         header('Location:../main.php?sidebar=class');
         exit();

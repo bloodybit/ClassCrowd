@@ -54,9 +54,12 @@ class Classe{
     public static function getClasses(){
         //clear the result
         $classes = array();
+
         //Get the connection
         $connection = Database::getConnection();
-        $query = 'SELECT  * FROM    class WHERE   deleted = false ORDER BY class ASC';
+
+        $query = 'SELECT  * FROM class WHERE   deleted = false ORDER BY class ASC';
+
         //Run the query
         $result_obj = $connection->query($query);
         try{
@@ -80,7 +83,6 @@ class Classe{
 
     public static function getNameByUserId($class_id){
         //clear the result
-        $className;
         $connection = Database::getConnection();
         $query = "SELECT class FROM class WHERE id=".$class_id;
         //echo $query;

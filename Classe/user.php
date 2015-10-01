@@ -17,6 +17,7 @@ class User{
 	public $surname;
 	public $mail;
 	public $password;
+	public $img;
 	public $class_id;
 	public $deleted;
 

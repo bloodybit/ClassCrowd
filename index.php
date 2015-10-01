@@ -1,3 +1,9 @@
+<?php
+include_once 'Classe/classe.php';
+include_once 'Functions/DbFunction.php';
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +18,6 @@
 
 <div class="error-go-away">
 <?php
-    session_start();
-
     if($_COOKIE['id']==$_SESSION['id'] && isset($_COOKIE['id'])){
         header("Location:main.php?sidebar=class");
     }
@@ -44,29 +48,37 @@
 		</section>
 
 		<section class="register-wrap">
-			<h2>New user</h2>
-			<form class="registration-card">
 
-				<input type="text" id="firstname" class="input-field" placeholder="First name" />
+			<h2>New user</h2>
+			<form class="registration-card" action="Functions/RegistrationFunction.php" method="post">
+
+				<input type="text" id="firstname" class="input-field" placeholder="First name" name="name"/>
 				<div id="firstFeedback" class="error-message"></div>
 
-				<input type="text" id="lastname" class="input-field" placeholder="Last name" />
+				<input type="text" id="lastname" class="input-field" placeholder="Last name" name="surname"/>
 				<div id="lastFeedback" class="error-message"></div>
 
-				<input type="text" id="mail" class="input-field" placeholder="Email address" />
+				<input type="text" id="mail" class="input-field" placeholder="Email address" name="mail"/>
 				<div id="mailFeedback" class="error-message"></div>
 
-				<input type="password" id="password" class="input-field" placeholder="New Password" />
+				<input type="password" id="password" class="input-field" placeholder="New Password" name="password1"/>
 				<div id="passFeedback" class="error-message"></div>
 
-				<input type="password" id="repassword" class="input-field" placeholder="Repeat Password" />
+				<input type="password" id="repassword" class="input-field" placeholder="Repeat Password" name="password2"/>
 				<div id="repassFeedback" class="error-message"></div>
 
-				<select id="studentClass">
+				<select id="studentClass" name="classe">
 					<option value="Default">Please select your class:</option>
-					<option value="WebDev1st">Web Development, 1st sem.</option>
+					<?php //get all the Class avaiable
+						$classes = Classe::getClasses();
+						foreach($classes as $classe){
+							echo '<option value="'. $classe->getId() . '">' . $classe->getClass() . '</option>';
+						}
+					?>
+
 				</select>
 				<div id="classFeedback" class="error-message"></div>
+
 
 				<input type="submit" name="registration" value="Sign up">
 			</form>

@@ -20,10 +20,19 @@ if(isset($_GET['subject_id'])){
 
     $lessonsList = Lesson::getLessonsBySubjectId($_GET['subject_id']);
 
+
+?>
+<a href="add-new-lesson"><div class="lesson_box"> 
+<i class="fa fa-plus"></i>
+</div></a>
+
+<?php
+
 if (!empty($lessonsList)) {
  foreach($lessonsList as $lesson){
     ?>
-    <?php echo '<a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'"> '?><div class="lesson_box"> 
+    <?php echo '<a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'"> '?>
+    <div class="lesson_box"> 
     <?php
         //format the date
         $day = date('j', strtotime($lesson->getDate()));
@@ -80,6 +89,8 @@ else{
     <ul id="empty-list">
 
         <li><span>There are no <span class="special-char">lessons</span> added to this <span class="special-char">Subject</span> yet!</li>
+
+        <li><span>Use the <span class="special-char">add</span> button to add new lesson!</span></li>
        
     </ul>
 

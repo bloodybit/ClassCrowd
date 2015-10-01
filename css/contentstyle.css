@@ -92,7 +92,8 @@
 
 
 #empty-list{
-	margin-top: 30px;
+	margin-top: 130px;
+    margin-left: 200px;
     margin-bottom: 30px;
     position: relative;
 }
@@ -117,6 +118,7 @@
 }
 
 
+
 .sidebar-link:not:first-child{
 	color: red !important;
 }
@@ -131,4 +133,17 @@
 
 #subject-sub-title{
 	font-size: 14px;
+}
+
+.fa.fa-plus{
+	color:white;
+	width: 200px;
+	text-align: center;
+	margin-top:25px;
+	font-size: 10em;
+}
+
+.fa.fa-plus:hover{
+	transition: 0.2s;
+	color:rgb(44, 62, 80);
 }

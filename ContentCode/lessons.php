@@ -31,12 +31,10 @@ if(isset($_GET['subject_id'])){
 if (!empty($lessonsList)) {
  foreach($lessonsList as $lesson){
     ?>
-<<<<<<< HEAD
     <?php echo '<a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&content=doc&lesson_id='.$lesson->getId().'"> '?>
     <div class="lesson_box"> 
-=======
-    <?php echo '<a href="main.php?sidebar=lessons&subject_id='.$lesson->getSubjectId().'&class_id='.$_GET['class_id'].'&content=doc&lesson_id='.$lesson->getId().'"> '?><div class="lesson_box">
->>>>>>> e7466595fcc25519ee3c10079313e26ace6da650
+ 
+
     <?php
         //format the date
         $day = date('j', strtotime($lesson->getDate()));

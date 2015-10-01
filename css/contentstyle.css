@@ -150,3 +150,9 @@
 	transition: 0.2s;
 	color:rgb(44, 62, 80);
 }
+
+#static-content{
+	
+}
+
+#new-lesson { display: none; padding: 5px; background: #FF0000; }

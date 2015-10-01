@@ -89,9 +89,19 @@ if(!file_exists($_FILES['photo'])){
     $uploaddir = 'img/';
 
     $extension = end(explode('.', $_FILES['photo']['name']));
-    echo "eww " . $_FILES['photo']['name'];
     $uploadfile = $uploaddir . basename($_FILES['photo']['tmp_name']. ".". $extension);
-    echo $uploadfile;
+
+    if(move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
+        //File uploaded in the server
+
+        // Add the new path in the Database
+        $connection = Database::getConnection();
+
+        //NO safety control!!!
+        $query = "INSERT INTO photo"
+    } else {
+        $_SESSION['message'] = "Problem with the photo's uploading in the server";
+    }
 }
 
 $_SESSION['message'] = "DONE!";

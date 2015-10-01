@@ -118,11 +118,11 @@ class Classe{
             //SHOULD BE ONLY ONE ELEMENT FOR SURE
             $i=0;
             while($result = $result_obj->fetch_array(MYSQLI_ASSOC)){
-                $className = new Classe($result);
+                $className = $result;
                 $i++;
             }
             //pass back the result
-            return $className->getClass();
+            return $result['class'];
         } catch(Exception $e){
             $_SESSION['message'] = $e->getMessage(); //Not properly good for safety
         }
